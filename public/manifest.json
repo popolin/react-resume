@@ -1,0 +1,8 @@
+{
+  "short_name": "Updated Resume",
+  "name": "Updated Resume | html, json",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
