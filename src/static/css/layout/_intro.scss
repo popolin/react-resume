@@ -15,9 +15,11 @@
 			position: relative;
 
 			img {
-				width: 10em;
+                height: 10em;
+                width: 10em;
+                object-fit: cover;
+                object-position: center;
 				border-radius: 50%;
-				display: block;
 			}
 		}
 

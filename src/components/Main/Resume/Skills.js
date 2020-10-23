@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { getI18n } from 'react-i18next';
+import { Trans } from 'react-i18next'
 
 import CategoryButton from './Skills/CategoryButton';
 import SkillBar from './Skills/SkillBar';
+
+// Simulando função t para internacionalização:
+const t = (key) => {
+    return getI18n().t(`main:${key}`);
+  }
 
 const handleProps = ({ categories, skills }) => ({
   buttons: categories.map((cat) => cat.name).reduce((obj, key) => ({
@@ -13,9 +20,12 @@ const handleProps = ({ categories, skills }) => ({
 });
 
 class Skills extends Component {
+
   constructor(props) {
     super(props);
+    
     this.state = handleProps({ categories: props.categories, skills: props.skills });
+   
   }
 
   getRows() {
@@ -70,12 +80,16 @@ class Skills extends Component {
   render() {
     return (
       <div className="skills">
-        <div className="link-to" id="skills" />
+        <div className="link-to" id="resume.section.skills" />
         <div className="title">
-          <h3>Skills</h3>
-          <p>Note: I think these sections are silly, but everyone seems to have one.
-            Here is a *mostly* honest overview of my skills.
-          </p>
+            <h3>{t('resume.section.skills')}</h3>
+            <p>
+            <Trans 
+                i18nKey="main:resume.skills.description"
+                    components={{ 
+                    bold: <strong /> }}
+                />
+            </p>
         </div>
         <div className="skill-button-container">
           {this.getButtons()}

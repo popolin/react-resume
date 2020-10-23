@@ -1,0 +1,40 @@
+{
+    "header": {
+        "name": "Michel Popolin de Freitas",
+        "shortName": "Michel Popolin",
+        "email": "micpopolin@gmail.com",
+        "phone": "+55 61 98417 9585",
+        "photo": "https://i2.wp.com/mixdeseries.com.br/wp-content/uploads/2018/09/Henry-Cavill.jpg?w=620&ssl=1",
+        "city": "Brasília",
+        "state": "DF",
+        "country": "BR",
+        "website": "popolin.com.br",
+        "birthdate": "1981-07-01T19:30:00"
+    },
+    "countries": {
+        "total": 4,
+        "map": "https://www.google.com/maps/d/edit?mid=1oSEKBPMvHhiEmIxF1AJFMRoxugZVjhdW"
+    },
+    "contacts": [
+        {
+            "link": "https://github.com/popolin",
+            "label": "Github"
+        },
+        {
+            "link": "https://facebook.com/michel.freitas2",
+            "label": "Facebook"
+        },
+        {
+            "link": "https://www.instagram.com/michelpopolin",
+            "label": "Instagram"
+        },
+        {
+            "link": "https://www.linkedin.com/in/popolin",
+            "label": "LinkedIn"
+        },
+        {
+            "link": "mailto: micpopolin@gmail.com",
+            "label": "Email"
+        }
+    ]
+}

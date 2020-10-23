@@ -15,23 +15,19 @@ import {
     Toolbar,
   } from '../../components';
 
-const Main = ({children, fullPage, toolbarOpen, dispatch}) => {
-    console.log("Main");
-    console.debug(dispatch);
-
-    return (
+const Main = ({children, resume, toolbarOpen, dispatch}) => (
   <>
     <Analytics />
     <ScrollToTop />
-    <Helmet titleTemplate="%s | Michel Popolin" defaultTitle="Michel Popolin" />
-    <Toolbar dispatch={dispatch}  />
+    <Helmet titleTemplate={`%s | ${resume.header.shortName}`} defaultTitle={resume.header.shortName} />
+    <Toolbar toolbarOpen={toolbarOpen} dispatch={dispatch}  />
 
     <div id="wrapper">
-      <Header dispatch={dispatch} />
+      <Header toolbarOpen={toolbarOpen} dispatch={dispatch} resume={resume} />
       <div id="main">
         {children}
       </div>
-      {fullPage ? null : <Nav />}
+      <Nav resume={resume} />
     </div>
 
     
@@ -40,8 +36,7 @@ const Main = ({children, fullPage, toolbarOpen, dispatch}) => {
     <SimplesView />
 
   </>
-)
-    };
+);
 
 
 
@@ -66,26 +61,7 @@ Main.propTypes = {
 
 const mapStateToProps = state => ({
     toolbarOpen: state.app.toolbarOpen,
-    resume: state.resume,
-
-    // children: null,
-    // fullPage: false,
 });
 
 export default connect(mapStateToProps)(Main);
   
-
-// Main.propTypes = {
-//   children: PropTypes.oneOfType([
-//     PropTypes.arrayOf(PropTypes.node),
-//     PropTypes.node,
-//   ]),
-//   fullPage: PropTypes.bool,
-// };
-
-// Main.defaultProps = {
-//   children: null,
-//   fullPage: false,
-// };
-
-// export default Main;

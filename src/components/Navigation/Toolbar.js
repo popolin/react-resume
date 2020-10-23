@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { Sidebar } from 'semantic-ui-react';
 import { ToolbarHeader } from '.';
 import {
@@ -11,10 +9,7 @@ import {
 } from '../Tools';
 import { toggleToolbar } from '../../actions/app.actions';
 
-const Toolbar = ({toolbarOpen, dispatch, resume}) => {
-    console.log("Toolbar");
-    console.debug(dispatch);
-    return(
+const Toolbar = ({toolbarOpen, dispatch, resume}) => (
   <aside>
     <Sidebar
       animation="scale down"
@@ -29,8 +24,7 @@ const Toolbar = ({toolbarOpen, dispatch, resume}) => {
         <EditorButton dispatch={dispatch} />
     </Sidebar>
   </aside>
-)
-};
+);
 
 // Toolbar.defaultProps = {
 //   dispatch: () => {},

@@ -1,32 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Trans } from 'react-i18next'
+import {useTranslation} from "react-i18next";
 
 import Main from './Main';
 
+
 const Index = (props) => {
-    console.log("Index");
-    console.debug(props);
-    console.debug(props.data);
+    const {t} = useTranslation('main');
     return(
-  <Main>
-    <article className="post" id="index">
-      <header>
-        <div className="title">
-          <h2><Link to="/">About this site</Link></h2>
-          <p>A beautiful, responsive, react app written with modern Javascript.</p>
-        </div>
-      </header>
-      <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
-        or you can check out my {' '}
-        <Link to="/resume">resume</Link>, {' '}
-        <Link to="/projects">projects</Link>, {' '}
-        view <Link to="/stats">site statistics</Link>, {' '}
-        or <Link to="/contact">contact</Link> me.
-      </p>
-      <p> Source available <a href="https://github.com/mldangelo/personal-site">here</a>.</p>
-    </article>
-  </Main>
-)
-    };
+        <Main resume={props.resume}>
+            <article className="post" id="index">
+            <header>
+                <div className="title">
+                    <h2>
+                        <Link to="/">{t('index.about')}</Link>
+                    </h2>
+                    <p>{t('index.decription')}</p>
+                </div>
+            </header>
+            <p> 
+                <Trans 
+                    i18nKey="main:index.welcome"
+                    components={{ 
+                        about: <Link to="/about" />, 
+                        resume: <Link to="/resume" />, 
+                        stats: <Link to="/stats" />,
+                        contact: <Link to="/contact" /> }}
+                />
+            </p>
+            <p> {t('index.sourceAvailable')} <a href="https://github.com/popolin/react-resume">{t('index.here')}</a>.</p>
+            </article>
+        </Main>
+    )
+};
 
 export default Index;

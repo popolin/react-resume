@@ -8,7 +8,7 @@ const Table = ({ data }) => (
     <tbody>
       {data.map((pair) => (
         <TableRow
-          key={pair.label}
+          key={pair.itemKey}
           label={pair.label}
           value={pair.value}
           link={pair.link}

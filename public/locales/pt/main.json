@@ -1,0 +1,62 @@
+{
+    "header": {
+        "about": "Sobre",
+        "resume": "Currículo",
+        "stats": "Estatísticas",
+        "contact": "Contato"
+    },
+    "index": {
+        "about": "Sobre este site",
+        "decription": "Um website simples e responsivo feito com React e Javascript moderno.",
+        "welcome": "Bem vindo ao meu website. Fique a vontade para saber mais <about>sobre mim</about>, conferir meu <resume>currículo</resume>, ver as <stats>estatísticas do site</stats>, ou entrar em <contact>contato</contact> comigo.",
+        "sourceAvailable": "Código fonte disponível",
+        "here": "aqui"
+    },
+    "nav": {
+        "about": "Sobre",
+        "learnMore": "Leia mais",
+        "description": "Olá, meu nome é {{firstName}}. Eu gosto de criar coisas. Sou {{lastGraduationDegree}} em {{lastGraduation}} na <school>{{lastGraduationSchool}}</school> e {{latCompanyPosition}} da <lastCompany>{{latCompany}}</lastCompany>. Antes da <lastCompany>{{latCompany}}</lastCompany> também trabalhei na <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> e <others>outras</others>."
+    },
+    "about": {
+        "title": "Sobre mim",
+        "subtitle": "Em cerca de {{count}} palavras"
+    },
+    "resume": {
+        "title": "Currículo",
+        "section": {
+            "education": "Educação",
+            "experience": "Experiência",
+            "skills": "Habilidades",
+            "courses": "Cursos",
+            "references": "Referências"
+        },
+        "skills": {
+            "description": "Importante: Acredito que estes níveis abaixo não são tão relevantes, pois se trata de uma autoavaliação e alguns não utilizo há algum tempo. Mas é importante informar com o que já trabalhei, portanto <bold> tentei </bold> passar uma visão honesta de minhas habilidades:"
+        },
+        "courses": {
+            "title": "Cursos Realizados"
+        },
+        "references": {
+            "title": "As referências serão informadas quando requisitadas"
+        },
+        "stats": {
+            "title": "Estatísticas",
+            "currentAge": "Idade atual",
+            "countriesVisited": "Países visitados",
+            "currentCity": "Residência atual",
+            "aboutMe": "Alguns números sobre mim",
+            "aboutSite": "Alguns números sobre este website",
+            "stars": "Estrelas no repositório do Github",
+            "watchers": "Número de pessoas acompanhando este repositório",
+            "forks": "Número de forks",
+            "warnings": "Número de warnings",
+            "issues": "Problemas abertos no Github",
+            "lastUpdate": "Última atualização em",
+            "lines": "Linhas de Javascript para construção deste website"
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "Fique a vontade para entrar em contato. Me envie um email através do endereço:"
+        }
+    }
+}

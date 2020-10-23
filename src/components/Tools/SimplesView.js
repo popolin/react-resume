@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -73,7 +72,6 @@ class SimplesView extends Component {
           title="Versão Simples"
           titleIcon="file"
           click
-          statusMessageColor={statusColor}
           closeToolbar={() => dispatch(toggleSimples())}
           toolbarOpen={simplesOpen}
           backgroundColor={'#fff'}
@@ -89,7 +87,7 @@ class SimplesView extends Component {
           }}
         >
           <Segment
-            style={{ height: '100%', width: '100%', backgroundColor: '#fff' }}
+            style={{ backgroundColor: '#fff' }}
             color={statusColor}
           >
           <Resume />

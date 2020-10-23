@@ -1,13 +1,12 @@
 const data = [
     {
-      locale: 'pt-br',
-      flag: '🇧🇷',
+        locale: 'pt',
+        flag: '🇧🇷',
     },
     {
-      path: 'en',
-      flag: '🇺🇸',
+        locale: 'en',
+        flag: '🇺🇸',
     },
-  ];
-  
-  export default data;
-  
+];
+
+export default data;

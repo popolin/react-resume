@@ -143,26 +143,6 @@ const Resume = {
 			"columnWidthPercent": "33.33%"
 		}
   ],
-  projects: [
-    {
-      name: 'Project 1',
-      dateFrom: 'XX/XXXX',
-      dateTo: '',
-      link: 'http://website.com',
-      teamBrief: '1-person project',
-      details: ['Detail 1', 'Detail 2', 'http://projectLink.com'],
-      isVisible: true,
-    },
-    {
-      name: 'Project 2',
-      link: 'http://website.com',
-      dateFrom: 'XX/XXXX',
-      dateTo: 'XX/XXXX',
-      teamBrief: '1-person project',
-      details: ['Detail 1', 'Detail 2', 'https://google.com'],
-      isVisible: true,
-    },
-  ],
 };
 
 export default Resume;

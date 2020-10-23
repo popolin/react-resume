@@ -1,0 +1,62 @@
+{
+    "header": {
+        "about": "About",
+        "resume": "Resume",
+        "stats": "Stats",
+        "contact": "Contact"
+    },
+    "index": {
+        "about": "About this site",
+        "decription": "A simple and responsive React App written with modern Javascript.",
+        "welcome": "Welcome to my website. Please feel free to read more <about>about me</about>, or you can check out my <resume>resume</resume>, view <stats>site statistics</stats>, or <contact>contact</contact> me.",
+        "sourceAvailable": "Source available",
+        "here": "here"
+    },
+    "nav": {
+        "about": "About",
+        "learnMore": "Learn more",
+        "description": "Hi, I'm {{firstName}}. I like building things. I am {{lastGraduationDegree}} in {{lastGraduation}} at <school>{{lastGraduationSchool}}</school> and {{latCompanyPosition}} of <lastCompany>{{latCompany}}</lastCompany>. Before <lastCompany>{{latCompany}}</lastCompany> I was at <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> and <others>others</others>."
+    },
+    "about": {
+        "title": "About me",
+        "subtitle": "In about {{count}} words"
+    },
+    "resume": {
+        "title": "Resume",
+        "section": {
+            "education": "Education",
+            "experience": "Experience",
+            "skills": "Skills",
+            "courses": "Courses",
+            "references": "References"
+        },
+        "skills": {
+            "description": "Note: I think these levels below are not so relevant, as it is a self-assessment and some I haven't used in a while. But it is important to inform what I have already dealt with, so <bold>I tried</bold> to give an honest view of my skills:"
+        },
+        "courses": {
+            "title": "Selected Courses"
+        },
+        "references": {
+            "title": "References are available upon request"
+        },
+        "stats": {
+            "title": "Stats",
+            "currentAge": "Current age",
+            "countriesVisited": "Countries visited",
+            "currentCity": "Current city",
+            "aboutMe": "Some stats about me",
+            "aboutSite": "Some stats about this site",
+            "stars": "Stars this repository has on github",
+            "watchers": "Number of people watching this repository",
+            "forks": "Number of forks",
+            "warnings": "Number of warnings",
+            "issues": "Open github issues",
+            "lastUpdate": "Last updated at",
+            "lines": "Lines of Javascript powering this website"
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "Feel free to get in touch. You can email me at:"
+        }
+    }
+}

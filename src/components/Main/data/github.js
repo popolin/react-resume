@@ -1,58 +1,54 @@
 import dayjs from 'dayjs';
 
-/* Keys returned by the github api. The other keys in the array below
- * are mostly jokes. These are the keys the github api query searches for.
- */
-export const githubKeys = [
-  'stargazers_count',
-  'watchers_count',
-  'forks',
-  'open_issues_count',
-  'subscribers_count',
-  'pushed_at',
-];
+import 'dayjs/locale/pt-br'
+import 'dayjs/locale/en'
+
+const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
+const locale = currentLanguage == "pt" ? 'pt-br' : 'en';
+const dayLocale = dayjs().locale(locale);
+var formattedData = dayLocale.format("MMMM D, YYYY");
+if(currentLanguage == "pt"){
+    formattedData = `${dayLocale.format("D")} de ${dayLocale.format("MMMM")} de ${dayLocale.format("YYYY")}`;
+}
 
 // TODO To be provided by an API
 const data = [
   {
-    label: 'Stars this repository has on github',
+    label: 'resume.stats.stars',
     key: 'stargazers_count',
     value: '0',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    link: 'https://github.com/popolin/react-resume/stargazers',
   }, {
-    label: 'Number of people watching this repository',
+    label: 'resume.stats.watchers',
     key: 'subscribers_count',
     value: '1',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    link: 'https://github.com/popolin/react-resume/stargazers',
   }, {
-    label: 'Number of forks',
+    label: 'resume.stats.forks',
     key: 'forks',
     value: '0',
-    link: 'https://github.com/mldangelo/personal-site/network',
+    link: 'https://github.com/popolin/react-resume/network',
   }, {
-    label: 'Number of spoons',
-    value: '0',
-  }, {
-    label: 'Number of linter warnings',
+    label: 'resume.stats.warnings',
     // TODO ammend this with a pre-commit hook
     // `npm run lint | grep problems | tail -1 | awk '{print $2}'`
     value: '0',
   }, {
-    label: 'Open github issues',
+    label: 'resume.stats.issues',
     key: 'open_issues_count',
     value: '0',
-    link: 'https://github.com/mldangelo/personal-site/issues',
+    link: 'https://github.com/popolin/react-resume/issues',
   }, {
-    label: 'Last updated at',
-    key: 'pushed_at',
-    value: dayjs().format('MMMM D, YYYY'),
-    link: 'https://github.com/mldangelo/personal-site/commits',
+    label: 'resume.stats.lastUpdate',
+    key: 'resume.stats.pushed_at',
+    value: formattedData,
+    link: 'https://github.com/popolin/react-resume/commits',
   },
   { /* find . | grep ".js" | grep -vE ".min.js|node_modules|.git|.json" |
     xargs -I file cat file | wc -l */
-    label: 'Lines of Javascript powering this website',
+    label: 'resume.stats.lines',
     value: '2625',
-    link: 'https://github.com/mldangelo/personal-site/graphs/contributors',
+    link: 'https://github.com/popolin/react-resume/graphs/contributors',
   },
 ];
 

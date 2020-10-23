@@ -30,13 +30,7 @@ const ToggleProvider = ({ children }) => {
             {children}
             <Router >
                 <Switch>
-                    <Route exact path="/" render={props => (
-                    <ToggleProvider.Consumer>
-                        {
-                        context=><Index context={context} />
-                        }
-                    </ToggleProvider.Consumer>
-                    )} />
+                  
                     {/* <Route exact path={ROUTES.HOME.PATH} component={Index} data={data}/> */}
                     {/* <Route path="/about" component={About} />
                     <Route path="/contact" component={Contact} />

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import {useTranslation} from "react-i18next";
+
 import Main from './Main';
 
 import Education from './Resume/Education';
@@ -16,37 +18,41 @@ import positions from './data/resume/positions';
 import { skills, categories } from './data/resume/skills';
 
 const sections = [
-  'Education',
-  'Experience',
-  'Skills',
-  'Courses',
-  'References',
+  'resume.section.education',
+  'resume.section.experience',
+  'resume.section.skills',
+  'resume.section.courses',
+  'resume.section.references',
 ];
 
-const Resume = () => (
-  <Main>
-    <Helmet title="Resume" />
-    <article className="post" id="resume">
-      <header>
-        <div className="title">
-          <h2><Link to="resume">Resume</Link></h2>
-          <div className="link-container">
-            {sections.map((sec) => (
-              <h4 key={sec}>
-                <a href={`#${sec.toLowerCase()}`}>{sec}</a>
-              </h4>))}
-          </div>
+const Resume = ({resume}) => {
+    const {t} = useTranslation('main');
 
-        </div>
-      </header>
-      <Education data={degrees} />
-      <Experience data={positions} />
-      <Skills skills={skills} categories={categories} />
-      <Courses data={courses} />
-      <References />
+    return (
+        <Main resume={resume}>
+            <Helmet title={t('resume.title')} />
+            <article className="post" id="resume">
+            <header>
+                <div className="title">
+                <h2><Link to="resume">{t('resume.title')}</Link></h2>
+                <div className="link-container">
+                    {sections.map((sec) => (
+                    <h4 key={sec}>
+                        <a href={`#${sec}`}>{t(sec)}</a>
+                    </h4>))}
+                </div>
 
-    </article>
-  </Main>
-);
+                </div>
+            </header>
+            <Education data={degrees} />
+            <Experience data={positions} />
+            <Skills skills={skills} categories={categories} />
+            <Courses data={courses} />
+            <References />
+
+            </article>
+        </Main>
+    )   
+};
 
 export default Resume;

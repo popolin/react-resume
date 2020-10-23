@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useTranslation} from "react-i18next";
 
 import Course from './Courses/Course';
 
@@ -18,17 +19,20 @@ const getRows = (courses) => courses.sort((a, b) => {
   />
 ));
 
-const Courses = ({ data }) => (
-  <div className="courses">
-    <div className="link-to" id="courses" />
-    <div className="title">
-      <h3>Selected Courses</h3>
-    </div>
-    <ul className="course-list">
-      {getRows(data)}
-    </ul>
-  </div>
-);
+const Courses = ({ data }) => {
+    const {t} = useTranslation('main');
+    return (
+        <div className="courses">
+            <div className="link-to" id="resume.section.courses" />
+            <div className="title">
+            <h3>{t('resume.courses.title')}</h3>
+            </div>
+            <ul className="course-list">
+            {getRows(data)}
+            </ul>
+        </div>
+    )
+};
 
 Courses.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({

@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {  Button } from 'semantic-ui-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/';
@@ -13,26 +11,36 @@ import languages from '../data/languages';
 
 import { toggleToolbar } from '../../../actions/app.actions';
 
-const Header = ({ toolbarOpen, dispatch }) => {
-    const menuIcon = toolbarOpen ? faTimes : faBars;
-    return(
-        <header id="header">
+import {useTranslation} from "react-i18next";
 
+const Header = ({ resume, toolbarOpen, dispatch }) => {
+
+    const {t, i18n} = useTranslation('main');
+
+    const changeLanguage = code => {
+        localStorage.setItem('@react-resume/language', code);
+        i18n.changeLanguage(code);
+    };
+
+    const toggleLocal = () => {
+        dispatch(toggleToolbar());
+    }
+    const menuIcon = toolbarOpen ? faTimes : faBars;
+    return (
+        <header id="header">
             <h1 className="index-link">
-                <Button onClick={() => dispatch(toggleToolbar()) } fluid style={{backgroundColor: 'transparent', flex: 1, height: 'inherit', width: 40, lineHeight: 1}}>
+                <Button onClick={() => toolbarOpen ? {} : toggleLocal() } fluid style={{backgroundColor: 'transparent', flex: 1, height: 'inherit', width: 40, lineHeight: 1}}>
                     <FontAwesomeIcon icon={menuIcon} />
                 </Button>
             </h1>
             <h1 className="index-link">
-            {routes.filter((l) => l.index).map((l) => (
-                <Link key={l.label} to={l.path}>{l.label}</Link>
-            ))}
+                <Link to="/">{resume.header.shortName}</Link>
             </h1>
             <nav className="links">
             <ul>
-                {routes.filter((l) => !l.index).map((l) => (
+                {routes.map((l) => (
                 <li key={l.label}>
-                    <Link to={l.path}>{l.label}</Link>
+                    <Link to={l.path}>{t(l.label)}</Link>
                 </li>
                 ))}
             </ul>
@@ -41,7 +49,7 @@ const Header = ({ toolbarOpen, dispatch }) => {
                 <ul>
                 {languages.filter((l) => !l.index).map((l, indice) => (
                     <li key={`in${indice}`}>
-                        <Link to={l.locale}>{l.flag}</Link>
+                        <Link onClick={() => changeLanguage(l.locale)} to={`#`}>{l.flag}</Link>
                     </li>
                 ))}
                 </ul>
@@ -51,23 +59,5 @@ const Header = ({ toolbarOpen, dispatch }) => {
         </header>
     )
 };
-
-
-// Header.defaultProps = {
-//     dispatch: () => {},
-//     toolbarOpen: false,
-//     };
-    
-// Header.propTypes = {
-//     dispatch: PropTypes.func,
-//     toolbarOpen: PropTypes.bool,
-//     };
-    
-// const mapStateToProps = state => ({
-//     toolbarOpen: state.app.toolbarOpen,
-//     });
-
-    
-// export default connect(mapStateToProps)(Header);
 
 export default Header;

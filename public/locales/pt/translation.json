@@ -1,0 +1,6 @@
+{
+    "teste": "PT",
+    "index": {
+        "title": "Bem vindo, {{nome}}"
+    }
+}
