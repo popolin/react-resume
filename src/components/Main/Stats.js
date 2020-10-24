@@ -8,10 +8,10 @@ import Main from './Main';
 import Personal from './Stats/Personal';
 import Site from './Stats/Site';
 
-const Stats = ({resume}) => {
+const Stats = ({resume, updateResume}) => {
     const {t} = useTranslation('main');
     return (
-        <Main resume={resume}>
+        <Main resume={resume} updateResume={updateResume}>
             <Helmet title={t('resume.stats.title')} />
             <article className="post" id="stats">
                 <header>

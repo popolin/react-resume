@@ -12,7 +12,7 @@ const docMarkdown = require('./data/about.md');
 // Make all hrefs react router links
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
-const About = () => {
+const About = ({resume, updateResume}) => {
 
     const {t} = useTranslation('main');
     const [markdown, setMarkdown] = React.useState('');
@@ -27,7 +27,6 @@ const About = () => {
             .then((md) => {
                 setMarkdown(md);
         })
-
     }
     
 
@@ -36,7 +35,7 @@ const About = () => {
         .filter((s) => s.length).length;
 
     return(
-        <Main>
+        <Main resume={resume} updateResume={updateResume}>
             <Helmet title={t('about.title')} />
             <article className="post" id="about">
             <header>

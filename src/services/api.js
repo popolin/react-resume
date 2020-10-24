@@ -1,6 +1,4 @@
 import { client, q } from '../config/db';
-import resume from './resume.json'
-// import Toast from 'react-native-simple-toast';
 
 const username = process.env.REACT_APP_DB_USERNAME;
 

@@ -26,22 +26,4 @@ const Toolbar = ({toolbarOpen, dispatch, resume}) => (
   </aside>
 );
 
-// Toolbar.defaultProps = {
-//   dispatch: () => {},
-//   toolbarOpen: false,
-//   resume: {},
-// };
-
-// Toolbar.propTypes = {
-//   dispatch: PropTypes.func,
-//   toolbarOpen: PropTypes.bool,
-//   resume: PropTypes.shape({}),
-// };
-
-// const mapStateToProps = state => ({
-//   toolbarOpen: state.app.toolbarOpen,
-//   resume: state.resume,
-// });
-
-// export default connect(mapStateToProps)(Toolbar);
 export default Toolbar;

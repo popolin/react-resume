@@ -15,7 +15,7 @@
     "nav": {
         "about": "Sobre",
         "learnMore": "Leia mais",
-        "description": "Olá, meu nome é {{firstName}}. Eu gosto de criar coisas. Sou {{lastGraduationDegree}} em {{lastGraduation}} na <school>{{lastGraduationSchool}}</school> e {{latCompanyPosition}} da <lastCompany>{{latCompany}}</lastCompany>. Antes da <lastCompany>{{latCompany}}</lastCompany> também trabalhei na <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> e <others>outras</others>."
+        "description": "Olá, meu nome é {{firstName}}. Eu gosto de criar coisas e programo há {{yearsExperience}} anos. Tenho {{lastGraduation}} na <school>{{lastGraduationSchool}}</school>. Atualmente sou {{latCompanyPosition}} da <lastCompany>{{latCompany}}</lastCompany>. Antes da <lastCompany>{{latCompany}}</lastCompany> também trabalhei na <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> e <others>outras</others>."
     },
     "about": {
         "title": "Sobre mim",
@@ -57,6 +57,9 @@
         "contact": {
             "title": "Contact",
             "description": "Fique a vontade para entrar em contato. Me envie um email através do endereço:"
+        },
+        "experience": {
+            "present": "Atual"
         }
     }
 }

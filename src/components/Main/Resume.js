@@ -13,8 +13,6 @@ import Courses from './Resume/Courses';
 import References from './Resume/References';
 
 import courses from './data/resume/courses';
-import degrees from './data/resume/degrees';
-import positions from './data/resume/positions';
 import { skills, categories } from './data/resume/skills';
 
 const sections = [
@@ -25,11 +23,11 @@ const sections = [
   'resume.section.references',
 ];
 
-const Resume = ({resume}) => {
+const Resume = ({resume, updateResume}) => {
     const {t} = useTranslation('main');
 
     return (
-        <Main resume={resume}>
+        <Main resume={resume} updateResume={updateResume}>
             <Helmet title={t('resume.title')} />
             <article className="post" id="resume">
             <header>
@@ -44,8 +42,8 @@ const Resume = ({resume}) => {
 
                 </div>
             </header>
-            <Education data={degrees} />
-            <Experience data={positions} />
+            <Education degrees={resume.degrees} />
+            <Experience positions={resume.positions} />
             <Skills skills={skills} categories={categories} />
             <Courses data={courses} />
             <References />

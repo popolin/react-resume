@@ -70,7 +70,7 @@ const useInterval = (callback, delay) => {
     }, [delay]);
 };
 
-const Contact = ({ resume }) => {
+const Contact = ({ resume, updateResume }) => {
 
     const { t } = useTranslation('main');
     
@@ -105,7 +105,7 @@ const Contact = ({ resume }) => {
     }, isActive ? delay : null);
 
     return (
-        <Main resume={resume}>
+        <Main resume={resume} updateResume={updateResume}>
             <Helmet title={t('resume.contact.title')} />
             <article className="post" id="contact">
                 <header>

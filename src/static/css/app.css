@@ -145,3 +145,34 @@
     background-color: #fff !important;
   }
 }
+
+.errorPanel {
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    padding: 25px;
+    padding-top: 10px;
+    border-color: '#a13b3d';
+    border: #a13b3d solid 1px;
+    min-height: 200px;
+    border-radius: 5px;
+    background-color: #fee0e0;
+}
+
+.errorTitle {
+    margin-bottom: 0px;
+    color: #b83a3d;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.errorDivider {
+    background-color: #b83a3d;
+    height: 1px;
+    opacity: 0.7;
+}
+
+.errorText {
+    color: #b83a3d;
+    font-size: 1.2em;
+}

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import LoadingSpinner from './components/Static/LoadingSpinner';
 import { Provider } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'semantic-ui-css/semantic.min.css';
@@ -29,7 +30,7 @@ toast.configure({
 
 ReactDOM.render(
 
-    <Suspense fallback="loading">
+    <Suspense fallback={<LoadingSpinner />}>
         <Provider store={store} >
             <App />
         </Provider>

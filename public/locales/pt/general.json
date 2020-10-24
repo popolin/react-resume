@@ -1,0 +1,6 @@
+{
+    "error": "Erro",
+    "errorGeneralDescription": "Estranho. Algo deveria estar funcionando, mas não está:",
+    "errorContact": "Por favor, entre em contato através do email ",
+    "resumeNotFound": "Curriculo não localizado na base de dados"
+}

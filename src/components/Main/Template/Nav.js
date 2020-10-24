@@ -2,12 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next'
 import {useTranslation} from "react-i18next";
+import dayjs from 'dayjs';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {getSocialIcon} from '../../../util/iconUtil'
 
 const Nav = ({resume}) => {
     const {t} = useTranslation('main');
+    const degreesOrdered = resume.degrees.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
+    const lastDegree = degreesOrdered[0];
+
+    const positionsOrdered = resume.positions.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
+    const lastPosition = positionsOrdered[0];
+    const penultPosition = positionsOrdered[1];
+    const antPenultPosition = positionsOrdered[2];
+    const firstPosition = positionsOrdered[positionsOrdered.length-1];
+    const yearsExperience = dayjs().year() - dayjs(firstPosition.begin).year();
+
     return(
         <section id="sidebar">
             <section id="intro">
@@ -26,20 +37,20 @@ const Nav = ({resume}) => {
                 <Trans 
                     i18nKey="main:nav.description"
                     values={{
+                        yearsExperience,
                         firstName: resume.header.name.split(' ')[0],
-                        lastGraduationDegree: 'Master Degree',
-                        lastGraduationSchool: 'UnB',
-                        lastGraduation: 'Distributed Computing Development',
-                        latCompanyPosition: 'Full Stack Dev',
-                        latCompany: 'Trix',
-                        penultCompany: 'Pix',
-                        beforePenultCompany: 'Oi'
+                        lastGraduation: lastDegree.degree,
+                        lastGraduationSchool: lastDegree.school,
+                        latCompanyPosition: lastPosition.position,
+                        latCompany: lastPosition.company,
+                        penultCompany: penultPosition.company,
+                        beforePenultCompany: antPenultPosition.company
                     }}
                     components={{ 
-                        school: <a target='_blank' href="http://ppgi.unb.br" />, 
-                        lastCompany: <a target='_blank' href="https://www.trixti.com.br" />, 
-                        penultCompany: <a target='_blank' href="https://www.facebook.com/pixidea" />, 
-                        beforePenultCompany: <a target='_blank' href="http://oiapps.com.br" />,
+                        school: <a target='_blank' href={lastDegree.link} />, 
+                        lastCompany: <a target='_blank' href={lastPosition.link} />, 
+                        penultCompany: <a target='_blank' href={penultPosition.link} />, 
+                        beforePenultCompany: <a target='_blank' href={antPenultPosition.link} />,
                         others: <Link to='/resume' /> }}
                 />
             </p>

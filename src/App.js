@@ -15,10 +15,12 @@ import Index from './components/Main/Index'
 
 import './static/css/app.css';
 import './static/css/main.scss';
+import LoadingSpinner from './components/Static/LoadingSpinner';
+import CriticalError from './components/Static/CriticalError';
+
 
 const history = createBrowserHistory();
 const { ROUTES } = constants;
-
 
 const App = (props) => {
 
@@ -38,7 +40,8 @@ const App = (props) => {
         const locate = localStorage.getItem('@react-resume/language') || 'en';
         getResumeNode(locate).then(resume => {
             if(resume == null){
-                setData({ ...data, error: 'Resume not found at database' });
+                const message = locate == "pt" ? 'Curriculo não localizado na base de dados' : 'Resume not found at database';
+                setData({ ...data, error: message });
             } else {
                 setData({ ...data, resume });
             }
@@ -46,31 +49,25 @@ const App = (props) => {
     } 
 
     if(data.error){
-        return <p><strong>Erro: </strong>{data.error}</p>
+        return  <CriticalError message={data.error} />
     } else if (data.resume == null){
-        return <p>Loading resume...</p>
+        return  <LoadingSpinner />
     }
 
-    const indexRoute = (comp, props) => {
+    const createRoute = (comp, props) => {
         const extra = {updateResume: () => updateResume(), resume: data.resume};
         return React.createElement(comp, {...props, ...extra})
     }
-    
-    const aboutRoute = (props) => <About resume={data.resume} {...props} />
-    const contactRoute = (props) => <Contact resume={data.resume} {...props} />
-    const resumeRoute = (props) => <Resume resume={data.resume} {...props} />
-    const statsRoute = (props) => <Stats resume={data.resume} {...props} />
-
     return (
         <div className={classNames('App', {})}>
             <Router history={history} >
                 <Switch>
                     {/* <Route exact path={ROUTES.HOME.PATH} component={Index} /> */}
-                    <Route exact path={ROUTES.HOME.PATH} component={(props) => indexRoute(Index, props)} />
-                    <Route path="/about" component={aboutRoute} />
-                    <Route path="/contact" component={contactRoute} />
-                    <Route path="/resume" component={resumeRoute} />
-                    <Route path="/stats" component={statsRoute} />
+                    <Route exact path={ROUTES.HOME.PATH} component={(props) => createRoute(Index, props)} />
+                    <Route path="/about" component={(props) => createRoute(About, props)} />
+                    <Route path="/contact" component={(props) => createRoute(Contact, props)} />
+                    <Route path="/resume" component={(props) => createRoute(Resume, props)} />
+                    <Route path="/stats" component={(props) => createRoute(Stats, props)} />
                     {/* <Route component={Index} data={data} /> */}
                 </Switch>
             </Router>

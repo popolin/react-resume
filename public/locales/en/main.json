@@ -15,7 +15,7 @@
     "nav": {
         "about": "About",
         "learnMore": "Learn more",
-        "description": "Hi, I'm {{firstName}}. I like building things. I am {{lastGraduationDegree}} in {{lastGraduation}} at <school>{{lastGraduationSchool}}</school> and {{latCompanyPosition}} of <lastCompany>{{latCompany}}</lastCompany>. Before <lastCompany>{{latCompany}}</lastCompany> I was at <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> and <others>others</others>."
+        "description": "Hi, I'm {{firstName}}. I like building things and have been coding for {{yearsExperience}} years. I am {{lastGraduation}} at <school>{{lastGraduationSchool}}</school>. Currently I am {{latCompanyPosition}} at <lastCompany>{{latCompany}}</lastCompany>. Before <lastCompany>{{latCompany}}</lastCompany> I was at <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> and <others>others</others>."
     },
     "about": {
         "title": "About me",
@@ -57,6 +57,9 @@
         "contact": {
             "title": "Contact",
             "description": "Feel free to get in touch. You can email me at:"
+        },
+        "experience": {
+            "present": "Present"
         }
     }
 }

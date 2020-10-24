@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {useTranslation} from "react-i18next";
+import dayjs from 'dayjs';
 
 import Degree from './Education/Degree';
 
-const Education = ({ data }) => {
+const Education = ({ degrees }) => {
     const {t} = useTranslation('main');
+    const degreesOrdered = degrees.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
 
     return(
         <div className="education">
@@ -13,27 +14,14 @@ const Education = ({ data }) => {
             <div className="title">
                 <h3>{t('resume.section.education')}</h3>
             </div>
-            {data.map((degree) => (
+            {degreesOrdered.map((degree, idx) => (
             <Degree
                 data={degree}
-                key={degree.school}
+                key={idx}
             />
             ))}
         </div>
     )
-};
-
-Education.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    school: PropTypes.string,
-    degree: PropTypes.string,
-    link: PropTypes.string,
-    year: PropTypes.number,
-  })),
-};
-
-Education.defaultProps = {
-  data: [],
 };
 
 export default Education;
