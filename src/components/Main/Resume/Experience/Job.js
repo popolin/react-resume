@@ -8,7 +8,7 @@ import 'dayjs/locale/pt-br'
 import 'dayjs/locale/en'
 
 const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
-const locale = currentLanguage == "pt" ? 'pt-br' : 'en';
+const locale = currentLanguage === "pt" ? 'pt-br' : 'en';
 
 const Job = ({ data }) => {
     const {t} = useTranslation('main');

@@ -76,9 +76,9 @@ const Contact = ({ resume, updateResume }) => {
     
     const mailDomain = resume.header.email.split('@')[1];
     const mailName = resume.header.email.split('@')[0];
-    const messages = currentLanguage == "pt" ? 
-                            messagesPt.map(message => message == "mail" ? mailName : message) : 
-                            messagesEn.map(message => message == "mail" ? mailName : message);
+    const messages = currentLanguage === "pt" ? 
+                            messagesPt.map(message => message === "mail" ? mailName : message) : 
+                            messagesEn.map(message => message === "mail" ? mailName : message);
 
     const hold = 50; // ticks to wait after message is complete before rendering next message
     const delay = 50; // tick length in mS

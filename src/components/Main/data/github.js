@@ -4,10 +4,10 @@ import 'dayjs/locale/pt-br'
 import 'dayjs/locale/en'
 
 const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
-const locale = currentLanguage == "pt" ? 'pt-br' : 'en';
+const locale = currentLanguage === "pt" ? 'pt-br' : 'en';
 const dayLocale = dayjs().locale(locale);
 var formattedData = dayLocale.format("MMMM D, YYYY");
-if(currentLanguage == "pt"){
+if(currentLanguage === "pt"){
     formattedData = `${dayLocale.format("D")} de ${dayLocale.format("MMMM")} de ${dayLocale.format("YYYY")}`;
 }
 

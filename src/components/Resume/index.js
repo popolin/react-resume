@@ -8,8 +8,6 @@ import Education from './Education';
 import Experience from './Experience';
 import ResumeHeader from './Header';
 import TechnicalSkills from './TechnicalSkills';
-import {  Button } from 'semantic-ui-react';
-// import { paperSizes } from '../Tools/PaperSize';
 import {
   EDUCATION,
   TECH_SKILLS,
