@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Course = ({ data, last }) => (
+import dayjs from 'dayjs';
+
+const Course = ({ data }) => (
   <li className="course-container">
-    <a href={data.link}>
-      <h4 className="course-number">{data.number}:</h4>
-      <p className="course-name">{data.title}</p>
-    </a>
-    {!last && <div className="course-dot"><p className="course-name"> &#8226;</p></div>}
+    <div className="course-info">
+        <a href={data.link} target="_blank">
+            <p className="course-name">{data.title} <span style={{fontWeight: 900}}>({data.duration}h)</span></p>
+        </a>
+        <p className="course-date" style={{marginBottom: -10}}>{dayjs(data.begin).format("MMMM, YYYY")}</p>
+        <p className="course-school" style={{}}>{data.school}</p>
+    </div>
   </li>
 );
 

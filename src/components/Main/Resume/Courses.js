@@ -1,25 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {useTranslation} from "react-i18next";
+import dayjs from 'dayjs';
 
 import Course from './Courses/Course';
 
-const getRows = (courses) => courses.sort((a, b) => {
-  let ret = 0;
-  if (a.university > b.university) ret = -1;
-  else if (a.university < b.university) ret = 1;
-  else if (a.number > b.number) ret = 1;
-  else if (a.number < b.number) ret = -1;
-  return ret;
-}).map((course, idx) => (
-  <Course
-    data={course}
-    key={course.title}
-    last={idx === courses.length - 1}
-  />
-));
+const getRows = (courses) => {
+    const coursesOrdered = courses.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
+    return coursesOrdered.map((course, idx) => (
+        <Course
+            data={course}
+            key={course.title}
+            last={idx === courses.length - 1}
+        />
+    ))
+};
 
-const Courses = ({ data }) => {
+const Courses = ({ courses }) => {
     const {t} = useTranslation('main');
     return (
         <div className="courses">
@@ -28,7 +25,7 @@ const Courses = ({ data }) => {
             <h3>{t('resume.courses.title')}</h3>
             </div>
             <ul className="course-list">
-            {getRows(data)}
+            {getRows(courses)}
             </ul>
         </div>
     )
