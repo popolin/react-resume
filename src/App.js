@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { constants } from './config';
 import { FocusTrap } from './helpers/app.helper';
-import { getResumeData } from './services/api';
+import { getResumeNode } from './services/api';
 
 import About from './components/Main/About'
 import Contact from './components/Main/Contact'
@@ -25,24 +25,37 @@ const App = (props) => {
     const [data, setData] = React.useState({
         openToolbar: false,
         resume: null,
+        error: null,
     });
 
     useEffect(() => {
-        const findResume = async () => {
-            setTimeout(() => {
-                getResumeData().then(resume => {
-                    setData({ ...data, resume });
-                });
-            }, 200);
+        if(data.resume == null){
+            updateResume();
         }
-        findResume();
     }, []);
 
-    if (data.resume == null) {
+    const updateResume = async () => {
+        const locate = localStorage.getItem('@react-resume/language') || 'en';
+        getResumeNode(locate).then(resume => {
+            if(resume == null){
+                setData({ ...data, error: 'Resume not found at database' });
+            } else {
+                setData({ ...data, resume });
+            }
+        });
+    } 
+
+    if(data.error){
+        return <p><strong>Erro: </strong>{data.error}</p>
+    } else if (data.resume == null){
         return <p>Loading resume...</p>
     }
 
-    const indexRoute = (props) => <Index resume={data.resume} {...props} />
+    const indexRoute = (comp, props) => {
+        const extra = {updateResume: () => updateResume(), resume: data.resume};
+        return React.createElement(comp, {...props, ...extra})
+    }
+    
     const aboutRoute = (props) => <About resume={data.resume} {...props} />
     const contactRoute = (props) => <Contact resume={data.resume} {...props} />
     const resumeRoute = (props) => <Resume resume={data.resume} {...props} />
@@ -53,7 +66,7 @@ const App = (props) => {
             <Router history={history} >
                 <Switch>
                     {/* <Route exact path={ROUTES.HOME.PATH} component={Index} /> */}
-                    <Route exact path={ROUTES.HOME.PATH} component={indexRoute} />
+                    <Route exact path={ROUTES.HOME.PATH} component={(props) => indexRoute(Index, props)} />
                     <Route path="/about" component={aboutRoute} />
                     <Route path="/contact" component={contactRoute} />
                     <Route path="/resume" component={resumeRoute} />
@@ -66,26 +79,4 @@ const App = (props) => {
     );
 };
 
-// App.defaultProps = {
-//     editorOpen: false,
-//     simplesOpen: false,
-//     jsonOpen: false,
-//     toolbarOpen: false,
-// };
-
-// App.propTypes = {
-//     editorOpen: PropTypes.bool,
-//     simplesOpen: PropTypes.bool,
-//     jsonOpen: PropTypes.bool,
-//     toolbarOpen: PropTypes.bool,
-// };
-
-// const mapStateToProps = state => ({
-//     editorOpen: state.app.editorOpen,
-//     simplesOpen: state.app.simplesOpen,
-//     jsonOpen: state.app.jsonOpen,
-//     toolbarOpen: state.app.toolbarOpen,
-// });
-
-// export default connect(mapStateToProps)(App);
 export default App;

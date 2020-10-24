@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 if (`NODE_ENV` === 'production') {
-  ReactGA.initialize(`GA_ID`);
+  ReactGA.initialize(`REACT_APP_GA_ID`);
 }
 
 const Analytics = () => {

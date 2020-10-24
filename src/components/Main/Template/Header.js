@@ -13,13 +13,14 @@ import { toggleToolbar } from '../../../actions/app.actions';
 
 import {useTranslation} from "react-i18next";
 
-const Header = ({ resume, toolbarOpen, dispatch }) => {
+const Header = ({ resume, updateResume, toolbarOpen, dispatch }) => {
 
     const {t, i18n} = useTranslation('main');
 
     const changeLanguage = code => {
         localStorage.setItem('@react-resume/language', code);
         i18n.changeLanguage(code);
+        updateResume();
     };
 
     const toggleLocal = () => {

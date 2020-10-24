@@ -6,10 +6,10 @@ import {useTranslation} from "react-i18next";
 import Main from './Main';
 
 
-const Index = (props) => {
+const Index = ({resume, updateResume}) => {
     const {t} = useTranslation('main');
     return(
-        <Main resume={props.resume}>
+        <Main resume={resume} updateResume={updateResume}>
             <article className="post" id="index">
             <header>
                 <div className="title">

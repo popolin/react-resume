@@ -9,7 +9,7 @@ const SETTINGS = {
 };
 
 export const APP = {
-  URL: process.env.PUBLIC_URL || '/',
+  URL: process.env.REACT_APP_PUBLIC_URL || '/',
   WORKING_DIR: process.env.REACT_APP_WORKING_DIR || '',
 };
 

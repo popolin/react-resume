@@ -1,13 +1,20 @@
-import axios from 'axios'
+import { client, q } from '../config/db';
 import resume from './resume.json'
 // import Toast from 'react-native-simple-toast';
 
-const api = axios.create({
-  baseURL: 'http://192.168.0.20:3000/api/app'
-});
+const username = process.env.REACT_APP_DB_USERNAME;
 
-export default api;
-
-export async function getResumeData(){
-    return resume;
+export const getResumeNode = async(language) => {
+    console.log(`getResumeNode: locale(${language}) username(${username})`);
+    try{
+        const ret = await client.query(
+            q.Get(
+                q.Match(q.Index('find_resume'), language, username)
+              )
+        );
+        return ret.data.resume;
+    } catch (error) {
+        return null;
+    }
+    
 }

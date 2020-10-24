@@ -15,7 +15,7 @@ import {
     Toolbar,
   } from '../../components';
 
-const Main = ({children, resume, toolbarOpen, dispatch}) => (
+const Main = ({children, resume, updateResume, toolbarOpen, dispatch}) => (
   <>
     <Analytics />
     <ScrollToTop />
@@ -23,7 +23,7 @@ const Main = ({children, resume, toolbarOpen, dispatch}) => (
     <Toolbar toolbarOpen={toolbarOpen} dispatch={dispatch}  />
 
     <div id="wrapper">
-      <Header toolbarOpen={toolbarOpen} dispatch={dispatch} resume={resume} />
+      <Header toolbarOpen={toolbarOpen} dispatch={dispatch} resume={resume} updateResume={updateResume} />
       <div id="main">
         {children}
       </div>
