@@ -1,0 +1,12 @@
+{
+    "toolbar": {
+        "options": "Options",
+        "construction": "Under construction",
+        "buttonSimple": "Simple version",
+        "buttonSimpleHover": "simple",
+        "buttonJson": "JSON Content",
+        "buttonJsonHover": "JSON",
+        "buttonEdit": "Edit JSON",
+        "buttonEditHover": "edit"
+    }
+}

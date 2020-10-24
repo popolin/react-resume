@@ -3,7 +3,6 @@ import { Sidebar } from 'semantic-ui-react';
 import { ToolbarHeader } from '.';
 import {
   EditorButton,
-  FancyButton,
   JsonButton,
   SimplesButton,
 } from '../Tools';
@@ -18,7 +17,6 @@ const Toolbar = ({toolbarOpen, dispatch, resume}) => (
       onHide={() => toolbarOpen && dispatch(toggleToolbar())}
       style={{ top: 'auto', overflowX: 'hidden', backgroundColor: '#fcfcfc', paddingBottom: 25 }} >
         <ToolbarHeader />
-        <FancyButton />
         <SimplesButton resume={resume} dispatch={dispatch} toolbarOpen={toolbarOpen} />
         <JsonButton dispatch={dispatch} />
         <EditorButton dispatch={dispatch} />

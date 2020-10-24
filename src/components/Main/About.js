@@ -40,7 +40,7 @@ const About = ({resume, updateResume}) => {
             <article className="post" id="about">
             <header>
                 <div className="title">
-                <h2><Link to="/about">About Me</Link></h2>
+                <h2><Link to="/about">{t('about.title')}</Link></h2>
                 <p>({t('about.subtitle', {count})})</p>
                 </div>
             </header>
