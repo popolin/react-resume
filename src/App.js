@@ -34,7 +34,7 @@ const App = (props) => {
         if(data.resume == null){
             updateResume();
         }
-    }, [data.resume, updateResume]);
+    }, []);
 
     const updateResume = async () => {
         const locate = localStorage.getItem('@react-resume/language') || 'en';

@@ -3,3 +3,6 @@ build
 coverage
 .env
 .vscode
+
+# Local Netlify folder
+.netlify
