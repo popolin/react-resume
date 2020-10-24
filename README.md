@@ -1,8 +1,6 @@
 
 ## My always updated Resume (React JS)
 
-![Screenshot](screenshot.png)
-
 This project was created to keep my curriculum information always updated from json content
 
 ### Get started
