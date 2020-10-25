@@ -2,14 +2,12 @@ import React from 'react';
 import { Label, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import {useTranslation} from "react-i18next";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 
 const ButtonMenu = ({ icon, label, labelHover, to, onClick, title }) => {
-    const {t} = useTranslation('edit');
+    
     return (
         <div className="json-resume-tool">
             {title && (

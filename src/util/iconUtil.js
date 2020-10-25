@@ -19,5 +19,7 @@ export function getSocialIcon(socialName) {
             return faTwitter;
         case 'Email':
             return faEnvelope;
+        default:
+            return null;
     }
 }

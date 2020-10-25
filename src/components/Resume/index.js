@@ -1,7 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import uuid from 'uuid/v4';
 import classNames from 'classnames';
 import Certifications from './Certifications';
 import Education from './Education';

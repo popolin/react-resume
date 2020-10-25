@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch, Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import classNames from 'classnames';

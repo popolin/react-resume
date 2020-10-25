@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-import { Label } from 'semantic-ui-react';
 import Menu from 'react-burger-menu/lib/menus/slide';
-import { faEdit } from '@fortawesome/free-solid-svg-icons/faEdit';
 import {faFileCode} from '@fortawesome/free-solid-svg-icons/faFileCode';
 import {faFile} from '@fortawesome/free-solid-svg-icons/faFile';
 
