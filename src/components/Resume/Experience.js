@@ -1,24 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import uuid from 'uuid/v4';
 
-const Experience = ({ experience, font }) => (
+const Experience = ({ resume }) => (
   <section data-testid="Experience" className="resume-experience">
-    <h2 style={{ fontFamily: font }}>
+    <h2>
       Experience
     </h2>
     <hr />
     <ul>
-      {experience.map(
+      {resume.experiences?.map(
         exp => exp.isVisible !== false && (
         <li key={uuid()}>
           {' '}
-          <h3 style={{ fontFamily: font }}>
+          <h3 >
             {exp.position}
           </h3>
           {exp.dateFrom &&
-            <h3 style={{ fontFamily: font }}>
+            <h3 >
               {`${exp.dateFrom}${exp.dateTo ? ` - ${exp.dateTo}` : ''}`}
             </h3>}
           <em>{`${exp.company}, ${exp.city}, ${exp.state}`}</em>
@@ -37,18 +35,4 @@ const Experience = ({ experience, font }) => (
   </section>
 );
 
-Experience.defaultProps = {
-  experience: [],
-};
-
-Experience.propTypes = {
-  experience: PropTypes.arrayOf(PropTypes.shape({})),
-  font: PropTypes.string.isRequired,
-};
-
-const mapStateToProps = state => ({
-  experience: state.resume.experience,
-  font: state.tools.font,
-});
-
-export default connect(mapStateToProps)(Experience);
+export default Experience;

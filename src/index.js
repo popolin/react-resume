@@ -1,14 +1,12 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import LoadingSpinner from './components/Static/LoadingSpinner';
-import { Provider } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './i18n';
 
 import App from './App';
-import store from './store';
 // import * as serviceWorker from './serviceWorker';
 
 toast.configure({
@@ -31,9 +29,7 @@ toast.configure({
 ReactDOM.render(
 
     <Suspense fallback={<LoadingSpinner />}>
-        <Provider store={store} >
-            <App />
-        </Provider>
+        <App />
     </Suspense>,
 
     document.getElementById('root'),

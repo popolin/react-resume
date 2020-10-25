@@ -1,8 +1,6 @@
 
 .json-resume-tool {
   margin-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .json-resume-tool > div {
@@ -21,8 +19,8 @@
 }
 
 .json-resume-tool button label {
-    font-size: 10px !important;
-    font-weight: 400 !important;
+    /* font-size: 10px !important;
+    font-weight: 400 !important; */
 }
 
 .json-resume-tool button:hover,
@@ -31,15 +29,15 @@
 }
 
 .json-resume-tool button:active {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; */
 }
 
 #json-resume-editor {
-  font-family: monospace;
+  /* font-family: monospace;
   font-size: 12px;
   width: 100% !important;
   height: 100% !important;
-  border: 1px solid black;
+  border: 1px solid black; */
 }
 
 #root > div > div.ui.scale.down.right.very.wide.visible.sidebar > div.ui.massive.borderless.top.attached.menu > div:nth-child(1) {
@@ -98,14 +96,14 @@
 .json-resume-tool.font-selector button {
   padding: 0;
 } */
-
+/* 
 #\#resume-order-changer {
   list-style: none;
   appearance: none;
   width: 100%;
   padding: 0;
   margin-top: 0;
-}
+} */
 
 .resume-toast-body {
   padding-left: 10px;

@@ -8,5 +8,13 @@
         "buttonJsonHover": "JSON",
         "buttonEdit": "Edit JSON",
         "buttonEditHover": "edit"
+    },
+    "simples": {
+        "title": "Simple Version",
+        "description": "Simple printable version"
+    },
+    "json": {
+        "title": "JSON Content",
+        "description": "JSON that feeds curriculum informations"
     }
 }

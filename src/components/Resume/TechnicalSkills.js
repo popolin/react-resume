@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import uuid from 'uuid/v4';
 import Stars from './Stars';
 
@@ -9,17 +7,19 @@ const defaultLevel = 4;
 const retString = kw => (typeof kw === 'string' ? kw : kw.name);
 const retObject = kw => (typeof kw === 'string' ? { name: kw, level: defaultLevel } : kw);
 
-const TechnicalSkills = ({ techSkills, showSkillLevel, font }) => (
+const showSkillLevel = true;
+
+const TechnicalSkills = ({ resume }) => (
   <section data-testid="TechSkills" className="resume-tech-skills">
-    <h2 style={{ fontFamily: font }}>
+    <h2>
       Technical Skills
     </h2>
     <hr />
     <div className="grid-container">
-      {techSkills.map(
+      {resume.techSkills?.map(
         (skill, index) => skill.isVisible !== false && (
             <div key={uuid()} className="grid-column" style={{ flexBasis: skill.columnWidthPercent || undefined}}>
-              <h3 style={{ fontFamily: font }}>
+              <h3>
                 {skill.category}
               </h3>
               {showSkillLevel
@@ -36,21 +36,4 @@ const TechnicalSkills = ({ techSkills, showSkillLevel, font }) => (
   </section>
 );
 
-TechnicalSkills.defaultProps = {
-  techSkills: [],
-  showSkillLevel: false,
-};
-
-TechnicalSkills.propTypes = {
-  techSkills: PropTypes.arrayOf(PropTypes.shape({})),
-  showSkillLevel: PropTypes.bool,
-  font: PropTypes.string.isRequired,
-};
-
-const mapStateToProps = state => ({
-  techSkills: state.resume.technicalSkills,
-  showSkillLevel: state.tools.showSkillLevel,
-  font: state.tools.font,
-});
-
-export default connect(mapStateToProps)(TechnicalSkills);
+export default TechnicalSkills;

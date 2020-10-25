@@ -12,7 +12,6 @@ const ToolbarHeader = () => {
         >
             <h1
             style={{
-                marginTop: 30,
                 marginBottom: 0,
                 textAlign: 'center',
             }} >💼 {t('toolbar.options')}

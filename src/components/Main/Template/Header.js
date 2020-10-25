@@ -1,20 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {  Button } from 'semantic-ui-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/';
-import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
-import {faTimes} from '@fortawesome/free-solid-svg-icons/faTimes';
 
 import Hamburger from './Hamburger';
+import HamburgerLeft from './HamburgerLeft';
 import routes from '../data/routes';
 import languages from '../data/languages';
 
-import { toggleToolbar } from '../../../actions/app.actions';
-
 import {useTranslation} from "react-i18next";
 
-const Header = ({ resume, updateResume, toolbarOpen, dispatch }) => {
-
+const Header = ({ resume, updateResume }) => {
+    
+    
     const {t, i18n} = useTranslation('main');
 
     const changeLanguage = code => {
@@ -23,18 +19,11 @@ const Header = ({ resume, updateResume, toolbarOpen, dispatch }) => {
         updateResume();
     };
 
-    const toggleLocal = () => {
-        dispatch(toggleToolbar());
-    }
-    const menuIcon = toolbarOpen ? faTimes : faBars;
     return (
         <header id="header">
-            <h1 className="index-link">
-                <Button onClick={() => toolbarOpen ? {} : toggleLocal() } fluid style={{backgroundColor: 'transparent', flex: 1, height: 'inherit', width: 40, lineHeight: 1}}>
-                    <FontAwesomeIcon icon={menuIcon} />
-                </Button>
-            </h1>
-            <h1 className="index-link">
+            <HamburgerLeft resume={resume} />
+
+            <h1 className="index-link" style={{marginLeft: 30}}>
                 <Link to="/">{resume.header.shortName}</Link>
             </h1>
             <nav className="links">

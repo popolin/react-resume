@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Route, Switch, Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import classNames from 'classnames';
@@ -7,11 +7,13 @@ import { constants } from './config';
 import { FocusTrap } from './helpers/app.helper';
 import { getResumeNode } from './services/api';
 
-import About from './components/Main/About'
-import Contact from './components/Main/Contact'
-import Resume from './components/Main/Resume'
-import Stats from './components/Main/Stats'
-import Index from './components/Main/Index'
+import About from './components/Main/About';
+import Contact from './components/Main/Contact';
+import Resume from './components/Main/Resume';
+import Stats from './components/Main/Stats';
+import Index from './components/Main/Index';
+import Simple from './components/Main/Simple';
+import Json from './components/Main/Json';
 
 import './static/css/app.css';
 import './static/css/main.scss';
@@ -24,7 +26,7 @@ const { ROUTES } = constants;
 
 const App = (props) => {
 
-    const [data, setData] = React.useState({
+    const [data, setData] = useState({
         openToolbar: false,
         resume: null,
         error: null,
@@ -68,6 +70,8 @@ const App = (props) => {
                     <Route path="/contact" component={(props) => createRoute(Contact, props)} />
                     <Route path="/resume" component={(props) => createRoute(Resume, props)} />
                     <Route path="/stats" component={(props) => createRoute(Stats, props)} />
+                    <Route path="/simple" component={(props) => createRoute(Simple, props)} />
+                    <Route path="/json" component={(props) => createRoute(Json, props)} />
                     {/* <Route component={Index} data={data} /> */}
                 </Switch>
             </Router>

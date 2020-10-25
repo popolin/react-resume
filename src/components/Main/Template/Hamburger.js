@@ -1,33 +1,43 @@
-import React, { useState } from 'react';
+import React, {useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
 
 import Menu from 'react-burger-menu/lib/menus/slide';
 
+import { useOnClickOutside } from '../../../helpers/hooks';
 import routes from '../data/routes';
 
 const Hamburger = () => {
-  const [open, setOpen] = useState(false);
+    const node = useRef();
+
+    useOnClickOutside(node, () => setMenuOpen(false));
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const changeMenuOpen = () => {
+        setMenuOpen(!menuOpen);
+    }
+
+
 
   return (
-    <div className="hamburger-container">
+    <div ref={node} className="hamburger-container">
       <nav className="main" id="hambuger-nav">
         <ul>
-          {open ? (
+          {menuOpen ? (
             <li className="menu close-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">&#10005;</div>
+              <div onClick={() => changeMenuOpen()} className="menu-hover">&#10005;</div>
             </li>
           ) : (
             <li className="menu open-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">&#9776;</div>
+              <div onClick={() => changeMenuOpen()} className="menu-hover">&#9776;</div>
             </li>
           )}
         </ul>
       </nav>
-      <Menu right isOpen={open}>
+      <Menu right isOpen={menuOpen}>
         <ul className="hamburger-ul">
           {routes.map((l) => (
             <li key={l.label}>
-              <Link to={l.path} onClick={() => setOpen(!open)}>
+              <Link to={l.path} onClick={() => changeMenuOpen()}>
                 <h3 className={l.index && 'index-li'}>{l.label}</h3>
               </Link>
             </li>

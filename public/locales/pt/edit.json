@@ -8,5 +8,13 @@
         "buttonJsonHover": "JSON",
         "buttonEdit": "Editar JSON",
         "buttonEditHover": "editar"
+    },
+    "simples": {
+        "title": "Versão Simples",
+        "description": "Versão simples para impressão"
+    },
+    "json": {
+        "title": "Conteúdo JSON",
+        "description": "JSON que alimenta as informações do currículo"
     }
 }
