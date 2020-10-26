@@ -1,8 +1,8 @@
 const data = [
-  {
-    path: '/about',
-    label: 'header.about',
-  },
+//   {
+//     path: '/about',
+//     label: 'header.about',
+//   },
   {
     path: '/resume',
     label: 'header.resume',
