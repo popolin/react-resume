@@ -6,15 +6,18 @@ import ReactMarkdown from 'react-markdown';
 
 import Main from './Main';
 
-const docMarkdown = require('./data/about.md');
 
 
-// Make all hrefs react router links
-const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
 const About = ({resume, updateResume}) => {
 
     const {t} = useTranslation('main');
+    const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
+
+    const docMarkdown = require(`./data/about_${currentLanguage}.md`);
+
+    // Make all hrefs react router links
+    const LinkRenderer = ({ ...children }) => <Link {...children} />;
     const [markdown, setMarkdown] = React.useState('');
 
     useEffect(() => {

@@ -1,8 +1,7 @@
-
 #### Intro
 I am coding at [Trix](https://trixti.com.br) where I work on software engineering build tools to health area. My primary job functions are as a data scientist and software engineer.
 <br>
-I am available to consult on interesting projects. I am particularly interested on Ruby, NodeJS and React and the areas I would prefer are social impact, health and education. If you would like to arrange a meeting, I am based in Brasilia (Brazil) but available to travel worldwide.
+I am available to consult on interesting projects. I am particularly interested on Ruby, NodeJS and React and the areas I would prefer are social impact, health and education. If you would like to arrange a meeting, I am based in Brasilia (Brazil), I am available to videos and can to travel worldwide.
 <br><br>
 #### Currently
 At Trix I am dealing with a team, since 2020 we start working remotely and that became hardlier. I'm also dealing with large web applications and interesting Java Android Apps and mobile React Native apps.
@@ -23,7 +22,7 @@ At Trix I am dealing with a team, since 2020 we start working remotely and that 
 
 - At 20, I started my graduation at [Unip](http://unip.br) where I have my first contact to algorithms, programming logic and basic languages. I coursed Science Computing.
 
-- In the same year I started the graduation, 2001, I had some other courses to define what was going to be my area to work. What I would like to do. I studied [MER](https://en.wikipedia.org/wiki/Entity–relationship_model) and [Delphi](https://en.wikipedia.org/wiki/Delphi_(software)).
+- In the same year I started the graduation, 2001, I had some other courses to define what was going to be my area to work. What I would like to do. I studied [MER](https://en.wikipedia.org/wiki/Entity–relationship_model) and [Delphi](https://en.wikipedia.org/wiki/Delphi_(software)) at [Senac](https://www.senac.br).
 
 - In 2001 I also created my first website. It just contained a lot of static informations about the September 11.
 
