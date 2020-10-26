@@ -9,6 +9,7 @@
         "about": "Sobre este site",
         "decription": "Um website simples e responsivo feito com React e Javascript moderno.",
         "welcome": "Bem vindo ao meu website. Fique a vontade para saber mais <about>sobre mim</about>, conferir meu <resume>currículo</resume>, ver as <stats>estatísticas do site</stats>, ou entrar em <contact>contato</contact> comigo.",
+        "subWelcome": "Este site está publicado no Netlify e o JSON do currículo salvo no FaunaDB",
         "sourceAvailable": "Código fonte disponível",
         "here": "aqui"
     },

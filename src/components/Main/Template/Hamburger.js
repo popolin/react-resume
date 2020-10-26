@@ -5,9 +5,11 @@ import Menu from 'react-burger-menu/lib/menus/slide';
 
 import { useOnClickOutside } from '../../../helpers/hooks';
 import routes from '../data/routes';
+import {useTranslation} from "react-i18next";
 
 const Hamburger = () => {
     const node = useRef();
+    const {t} = useTranslation('main');
 
     useOnClickOutside(node, () => setMenuOpen(false));
 
@@ -38,7 +40,7 @@ const Hamburger = () => {
           {routes.map((l) => (
             <li key={l.label}>
               <Link to={l.path} onClick={() => changeMenuOpen()}>
-                <h3 className={l.index && 'index-li'}>{l.label}</h3>
+                <h3 className={l.index && 'index-li'}>{t(l.label)}</h3>
               </Link>
             </li>
           ))}

@@ -29,6 +29,7 @@ const Index = ({resume, updateResume}) => {
                         contact: <Link to="/contact" /> }}
                 />
             </p>
+            <p>{t('index.subWelcome')}</p>
             <p> {t('index.sourceAvailable')} <a href="https://github.com/popolin/react-resume">{t('index.here')}</a>.</p>
             </article>
         </Main>
