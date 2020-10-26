@@ -23,16 +23,16 @@ const ButtonMenu = ({ icon, label, labelHover, to, onClick, title }) => {
                         backgroundColor: '#fff',
                         borderColor: '#fff',
                         fontSize: 12}}>
-                    <Button.Content visible style={{color:"#646464", marginTop: to === undefined ? 0 : 8}}>
-                        <FontAwesomeIcon icon={icon} />
-                        {'  '}
-                        {label}
-                    </Button.Content>
-                    <Button.Content hidden style={{color:"#646464"}}>
-                        {labelHover}{'  '}
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </Button.Content>
-                </Button>
+                <Button.Content visible style={{color:"#646464", marginTop: to === undefined ? 0 : 8}}>
+                    <FontAwesomeIcon icon={icon} />
+                    {'  '}
+                    {label}
+                </Button.Content>
+                <Button.Content hidden style={{color:"#646464"}}>
+                    {labelHover}{'  '}
+                    <FontAwesomeIcon icon={faArrowRight} />
+                </Button.Content>
+            </Button>
             
         </div>
     )

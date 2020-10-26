@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { getI18n } from 'react-i18next';
 import { Trans } from 'react-i18next'
+import {colors} from '../../Main/data/skills'
 
 import CategoryButton from './Skills/CategoryButton';
 import SkillBar from './Skills/SkillBar';
+
+
 
 // Simulando função t para internacionalização:
 const t = (key) => {
@@ -24,15 +26,23 @@ class Skills extends Component {
     constructor(props) {
         super(props);
 
-        this.state = handleProps({ categories: props.categories, skills: props.skills });
+        const skills = props.skills.map((skill) => ({ ...skill, category: skill.category.sort() }))
+        const categories = [...new Set(
+            skills.reduce((acc, { category }) => acc.concat(category), []),
+        )].sort().map((category, index) => ({
+            name: category,
+            color: colors[index],
+        }));
+        const handled = handleProps({ categories: categories, skills: skills });
+        this.state = {categories, ...handled};
 
     }
 
     getRows() {
-        // search for true active categories
+        const all = 'All';
         const actCat = Object.keys(this.state.buttons).reduce((cat, key) => (
             this.state.buttons[key] ? key : cat
-        ), 'All');
+        ), all);
 
         return this.state.skills.sort((a, b) => {
             let ret = 0;
@@ -46,7 +56,7 @@ class Skills extends Component {
         }).filter((skill) => (actCat === 'All' || skill.category.includes(actCat)))
             .map((skill) => (
                 <SkillBar
-                    categories={this.props.categories}
+                    categories={this.state.categories}
                     data={skill}
                     key={skill.title}
                 />
@@ -54,6 +64,7 @@ class Skills extends Component {
     }
 
     getButtons() {
+        console.debug(this.state.buttons)
         return Object.keys(this.state.buttons).map((key) => (
             <CategoryButton
                 label={key}
@@ -102,22 +113,5 @@ class Skills extends Component {
         );
     }
 }
-
-Skills.propTypes = {
-    skills: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string,
-        competency: PropTypes.number,
-        category: PropTypes.arrayOf(PropTypes.string),
-    })),
-    categories: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string,
-        color: PropTypes.string,
-    })),
-};
-
-Skills.defaultProps = {
-    skills: [],
-    categories: [],
-};
 
 export default Skills;

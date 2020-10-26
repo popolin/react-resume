@@ -15,6 +15,7 @@
     },
     "json": {
         "title": "JSON Content",
-        "description": "JSON that feeds curriculum informations"
+        "description": "JSON that feeds curriculum informations",
+        "notMe": "You are not me!"
     }
 }

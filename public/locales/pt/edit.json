@@ -15,6 +15,7 @@
     },
     "json": {
         "title": "Conteúdo JSON",
-        "description": "JSON que alimenta as informações do currículo"
+        "description": "JSON que alimenta as informações do currículo",
+        "notMe": "Você não sou eu!"
     }
 }

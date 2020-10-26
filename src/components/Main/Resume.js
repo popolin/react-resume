@@ -12,8 +12,6 @@ import Skills from './Resume/Skills';
 import Courses from './Resume/Courses';
 import References from './Resume/References';
 
-import { skills, categories } from './data/resume/skills';
-
 const sections = [
   'resume.section.education',
   'resume.section.experience',
@@ -43,7 +41,7 @@ const Resume = ({resume, updateResume}) => {
             </header>
             <Education degrees={resume.degrees} />
             <Experience positions={resume.positions} />
-            <Skills skills={skills} categories={categories} />
+            <Skills skills={resume.skills} />
             <Courses courses={resume.courses} />
             <References />
 
