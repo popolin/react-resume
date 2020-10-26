@@ -15,11 +15,9 @@ At Trix I am dealing with a team, since 2020 we start working remotely and that 
 
 - I subscribed my first Internet provider in 1995 I guess. It was AOL and I remember that dialing song trying to establish connection. I still remember installing it from a floppy disk.
 
-- Later 1995 I had my first course: MS-DOS, Word, Excel and Power Point. My teacher name was XXX.
+- Later 1995 I had my first course: MS-DOS, Word, Excel and Power Point. My teacher name was Abi.
 
 - In 1996 a frine of mine, Rogério, helped me to get into the [IRC](https://pt.wikipedia.org/wiki/Internet_Relay_Chat) and I start spending hours talking to people online. I use to wake up very early because it was expensive to keep the internet conected for a long.
-
-- In 1996 , my uncle purchased [MegaRace](https://en.wikipedia.org/wiki/MegaRace) from [Media Play](https://en.wikipedia.org/wiki/Media_Play) and installed it on my mom's work computer. I might have endangered her business by using her computer too much.
 
 - At 19, I took a course to learn Web Design. That included Photoshop, DreamWeaver and some other tools. It was at [Studio Online](https://www.studioonline.com.br) and my teacher was Fred.
 
