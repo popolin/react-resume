@@ -14,7 +14,7 @@ const Experience = ({ positions }) => {
         <div className="experience">
             <div className="link-to" id="resume.section.experience" />
             <div className="title" style={{margin: 23}}>
-                <h3>{t('resume.section.experience')}</h3>
+                <h3>{t('main:resume.section.experience')}</h3>
             </div>
             {positionsOrdered.map((job, idx) => (
             <Job

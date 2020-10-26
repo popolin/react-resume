@@ -23,6 +23,7 @@
     },
     "resume": {
         "title": "Currículo",
+        "lastThree": "Últimos três",
         "section": {
             "education": "Educação",
             "experience": "Experiência",

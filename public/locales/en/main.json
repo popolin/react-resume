@@ -23,6 +23,7 @@
     },
     "resume": {
         "title": "Resume",
+        "lastThree": "Last three",
         "section": {
             "education": "Education",
             "experience": "Experience",

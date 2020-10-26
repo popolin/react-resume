@@ -9,13 +9,17 @@
         "buttonEdit": "Editar JSON",
         "buttonEditHover": "editar"
     },
-    "simples": {
+    "simple": {
         "title": "Versão Simples",
-        "description": "Versão simples para impressão"
+        "description": "Versão simples para impressão",
+        "savePdf": "Salvar PDF",
+        "pdf": "PDF"
     },
     "json": {
         "title": "Conteúdo JSON",
         "description": "JSON que alimenta as informações do currículo",
-        "notMe": "Você não sou eu!"
+        "notMe": "Você não sou eu!",
+        "saveChanges": "Salvar alterações",
+        "save": "Salvar"
     }
 }

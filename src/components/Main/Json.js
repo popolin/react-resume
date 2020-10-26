@@ -61,10 +61,10 @@ const Json = ({resume, updateResume}) => {
                                 <Button.Content visible style={{color:"#646464"}}>
                                     <FontAwesomeIcon icon={faSave} />
                                     {'  '}
-                                    {'Salvar alterações'}
+                                    {t('json.saveChanges')}
                                 </Button.Content>
                                 <Button.Content hidden style={{color:"#646464", backgroundColor: ''}}>
-                                    {'Salvar'}{'  '}
+                                    {t('json.save')}{'  '}
                                     <FontAwesomeIcon icon={faArrowRight} />
                                 </Button.Content>
                             </Button>

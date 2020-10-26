@@ -9,13 +9,17 @@
         "buttonEdit": "Edit JSON",
         "buttonEditHover": "edit"
     },
-    "simples": {
+    "simple": {
         "title": "Simple Version",
-        "description": "Simple printable version"
+        "description": "Simple printable version",
+        "savePdf": "Save PDF",
+        "pdf": "PDF"
     },
     "json": {
         "title": "JSON Content",
         "description": "JSON that feeds curriculum informations",
-        "notMe": "You are not me!"
+        "notMe": "You are not me!",
+        "saveChanges": "Salve changes",
+        "save": "Save"
     }
 }
