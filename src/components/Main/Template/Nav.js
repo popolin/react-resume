@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {getSocialIcon} from '../../../util/iconUtil'
 
+
 const Nav = ({resume}) => {
     const {t} = useTranslation('main');
     const degreesOrdered = resume.degrees.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
@@ -18,6 +19,28 @@ const Nav = ({resume}) => {
     const antPenultPosition = positionsOrdered[2];
     const firstPosition = positionsOrdered[positionsOrdered.length-1];
     const yearsExperience = dayjs().year() - dayjs(firstPosition.begin).year();
+
+    const NavDesc = ({description}) => (
+        <Trans 
+            i18nKey={description}
+            values={{
+                yearsExperience,
+                firstName: resume.header.name.split(' ')[0],
+                lastGraduation: lastDegree.degree,
+                lastGraduationSchool: lastDegree.school,
+                latCompanyPosition: lastPosition.position,
+                latCompany: lastPosition.company,
+                penultCompany: penultPosition.company,
+                beforePenultCompany: antPenultPosition.company
+            }}
+            components={{ 
+                school: <a target='_blank' href={lastDegree.link} />, 
+                lastCompany: <a target='_blank' href={lastPosition.link} />, 
+                penultCompany: <a target='_blank' href={penultPosition.link} />, 
+                beforePenultCompany: <a target='_blank' href={antPenultPosition.link} />,
+                others: <Link to='/resume' /> }}
+        />
+    )
 
     return(
         <section id="sidebar">
@@ -34,25 +57,9 @@ const Nav = ({resume}) => {
             <section className="blurb">
             <h2>{t('nav.about')}</h2>
             <p>
-                <Trans 
-                    i18nKey="main:nav.description"
-                    values={{
-                        yearsExperience,
-                        firstName: resume.header.name.split(' ')[0],
-                        lastGraduation: lastDegree.degree,
-                        lastGraduationSchool: lastDegree.school,
-                        latCompanyPosition: lastPosition.position,
-                        latCompany: lastPosition.company,
-                        penultCompany: penultPosition.company,
-                        beforePenultCompany: antPenultPosition.company
-                    }}
-                    components={{ 
-                        school: <a target='_blank' href={lastDegree.link} />, 
-                        lastCompany: <a target='_blank' href={lastPosition.link} />, 
-                        penultCompany: <a target='_blank' href={penultPosition.link} />, 
-                        beforePenultCompany: <a target='_blank' href={antPenultPosition.link} />,
-                        others: <Link to='/resume' /> }}
-                />
+                <NavDesc description="main:nav.description1" />
+                <br />
+                <NavDesc description="main:nav.description2" />
             </p>
             <ul className="actions">
                 <li>

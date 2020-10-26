@@ -15,7 +15,8 @@
     "nav": {
         "about": "Sobre",
         "learnMore": "Leia mais",
-        "description": "Olá, meu nome é {{firstName}}. Eu gosto de criar coisas e programo há {{yearsExperience}} anos. Tenho {{lastGraduation}} na <school>{{lastGraduationSchool}}</school>. Atualmente sou {{latCompanyPosition}} da <lastCompany>{{latCompany}}</lastCompany>. Antes da <lastCompany>{{latCompany}}</lastCompany> também trabalhei na <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> e <others>outras</others>."
+        "description1": "Olá, meu nome é {{firstName}}. Eu gosto de criar coisas e programo há {{yearsExperience}} anos. Tenho {{lastGraduation}} na <school>{{lastGraduationSchool}}</school>.",
+        "description2": "Atualmente sou {{latCompanyPosition}} da <lastCompany>{{latCompany}}</lastCompany>. Antes da <lastCompany>{{latCompany}}</lastCompany> também trabalhei na <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> e <others>outras</others>."
     },
     "about": {
         "title": "Sobre mim",

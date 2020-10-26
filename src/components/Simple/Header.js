@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 5,
     width: '100%',
+    paddingTop: 5,
+    paddingBottom: 5,
     textAlign: 'center',
     alignItems: 'center',
     maxHeight: 30,

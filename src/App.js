@@ -33,7 +33,7 @@ const App = (props) => {
     });
 
     useEffect(() => {
-        if(data.resume == null){
+        if(data.resume === null){
             updateResume();
         }
     }, []);
@@ -42,7 +42,7 @@ const App = (props) => {
         const locate = localStorage.getItem('@react-resume/language') || 'en';
         getResumeNode(locate).then(resume => {
             if(resume == null){
-                const message = locate == "pt" ? 'Curriculo não localizado na base de dados' : 'Resume not found at database';
+                const message = locate === "pt" ? 'Curriculo não localizado na base de dados' : 'Resume not found at database';
                 setData({ ...data, error: message });
             } else {
                 setData({ ...data, resume });

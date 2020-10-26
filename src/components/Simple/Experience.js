@@ -66,7 +66,7 @@ const ExperienceEntry = ({t, experience}) => {
     const {company, position, begin, end, points} = experience;
     const beginLocale = dayjs(begin).locale(locale);
     const beginFormatted = beginLocale.format("MMMM, YYYY");
-    var endFormatted = "PRESENT";
+    var endFormatted = t('main:resume.experience.present');
     if(end){
         const endLocale = dayjs(end).locale(locale);
         endFormatted = endLocale.format("MMMM, YYYY");
@@ -95,7 +95,6 @@ const ExperienceEntry = ({t, experience}) => {
 };
 
 const Experience = ({t, positions}) => {
-    console.debug(t);
     const positionsOrdered = positions.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
     return (
         <View style={styles.container}>

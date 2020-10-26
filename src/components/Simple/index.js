@@ -10,13 +10,16 @@ import ReactPDF, {
 import Header from './Header';
 import Education from './Education';
 import Experience from './Experience';
-import Skills from './Skills';
+import Courses from './Courses';
+import Certifications from './Certification';
+import AboutMe from './AboutMe';
 
 
 import LatoBold from "./fonts/Lato/LatoBold.ttf"
 import LatoItalic from "./fonts/Lato/LatoItalic.ttf"
 import LatoRegular from "./fonts/Lato/LatoRegular.ttf"
 import OpenSansRegular from "./fonts/OpenSans/OpenSansRegular.ttf"
+
 
 const styles = StyleSheet.create({
   page: {
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
   leftColumn: {
     flexDirection: 'column',
     width: '50%',
-    paddingTop: 30,
+    paddingTop: 10,
     paddingRight: 15,
     '@media max-width: 400': {
       width: '100%',
@@ -72,10 +75,18 @@ const Resume = (props) => {
         <Header resume={props.resume} />
         <View style={styles.container}>
             <View style={styles.leftColumn}>
-                <Education t={t} degrees={resume.degrees} />
+                <AboutMe t={t} resume={resume} />
             </View>
             <View style={styles.leftColumn}>
-                <Skills />
+                <Education t={t} degrees={resume.degrees} />
+            </View>
+        </View>
+        <View style={styles.container}>
+            <View style={styles.leftColumn}>
+                <Certifications t={t} certifications={resume.certifications} />
+            </View>
+            <View style={styles.leftColumn}>
+                <Courses t={t} courses={resume.courses} />
             </View>
         </View>
         <Experience t={t} positions={resume.positions} />
