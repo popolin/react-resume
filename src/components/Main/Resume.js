@@ -38,7 +38,6 @@ const Resume = ({resume, updateResume}) => {
                         <a href={`#${sec}`}>{t(sec)}</a>
                     </h4>))}
                 </div>
-
                 </div>
             </header>
             <Education degrees={resume.degrees} />
