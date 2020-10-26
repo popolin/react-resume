@@ -29,7 +29,14 @@ const Index = ({resume, updateResume}) => {
                         contact: <Link to="/contact" /> }}
                 />
             </p>
-            <p>{t('index.subWelcome')}</p>
+            <p>
+                <Trans 
+                    i18nKey="main:index.subWelcome"
+                    components={{ 
+                        netlify: <a target='_blank' href='https://www.netlify.com/' />, 
+                        fauna: <a target='_blank' href='https://fauna.com/' />}}
+                />
+            </p>
             <p> {t('index.sourceAvailable')} <a href="https://github.com/popolin/react-resume">{t('index.here')}</a>.</p>
             </article>
         </Main>
