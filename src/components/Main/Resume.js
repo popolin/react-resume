@@ -10,6 +10,7 @@ import Education from './Resume/Education';
 import Experience from './Resume/Experience';
 import Skills from './Resume/Skills';
 import Courses from './Resume/Courses';
+import Certifications from './Resume/Certifications';
 import References from './Resume/References';
 
 const sections = [
@@ -17,6 +18,7 @@ const sections = [
   'resume.section.experience',
   'resume.section.skills',
   'resume.section.courses',
+  'resume.section.certifications',
   'resume.section.references',
 ];
 
@@ -43,6 +45,7 @@ const Resume = ({resume, updateResume}) => {
             <Experience positions={resume.positions} />
             <Skills skills={resume.skills} />
             <Courses courses={resume.courses} />
+            <Certifications certifications={resume.certifications} />
             <References />
 
             </article>
