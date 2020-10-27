@@ -6,8 +6,6 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 import dayjs from 'dayjs';
 
-const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
-const locale = currentLanguage === "pt" ? 'pt-br' : 'en';
 
 const styles = StyleSheet.create({
   container: {
@@ -62,7 +60,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ExperienceEntry = ({t, experience}) => {
+const ExperienceEntry = ({t, locale, experience}) => {
     const {company, position, begin, end, points} = experience;
     const beginLocale = dayjs(begin).locale(locale);
     const beginFormatted = beginLocale.format("MMMM, YYYY");
@@ -95,6 +93,9 @@ const ExperienceEntry = ({t, experience}) => {
 };
 
 const Experience = ({t, positions}) => {
+    const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
+    const locale = currentLanguage === "pt" ? 'pt-br' : 'en';
+
     const positionsOrdered = positions.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
     return (
         <View style={styles.container}>
@@ -105,6 +106,7 @@ const Experience = ({t, positions}) => {
             {positionsOrdered.filter((pos, idx) => idx < 3).map((position, idx) => (
             <ExperienceEntry
                 t={t}
+                locale={locale}
                 experience={position}
                 key={`experience-${idx}`}
             />
