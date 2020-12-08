@@ -34,8 +34,8 @@ const Index = ({ resume, updateResume }) => {
           <Trans
             i18nKey="main:index.subWelcome"
             components={{
-              netlify: <a target="_blank" href="https://www.netlify.com/" />,
-              fauna: <a target="_blank" href="https://fauna.com/" />,
+              netlify: <Link target="_blank" to="https://www.netlify.com/" />,
+              fauna: <Link target="_blank" to="https://fauna.com/" />,
             }}
           />
         </p>
@@ -43,7 +43,7 @@ const Index = ({ resume, updateResume }) => {
           {' '}
           {t('index.sourceAvailable')}
           {' '}
-          <a href="https://github.com/popolin/react-resume">{t('index.here')}</a>
+          <Link to="https://github.com/popolin/react-resume">{t('index.here')}</Link>
           .
         </p>
       </article>
