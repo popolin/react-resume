@@ -15,10 +15,10 @@ import Certifications from './Certification';
 import AboutMe from './AboutMe';
 
 
-import LatoBold from "./fonts/Lato/LatoBold.ttf"
-import LatoItalic from "./fonts/Lato/LatoItalic.ttf"
-import LatoRegular from "./fonts/Lato/LatoRegular.ttf"
-import OpenSansRegular from "./fonts/OpenSans/OpenSansRegular.ttf"
+import LatoBold from './fonts/Lato/LatoBold.ttf';
+import LatoItalic from './fonts/Lato/LatoItalic.ttf';
+import LatoRegular from './fonts/Lato/LatoRegular.ttf';
+import OpenSansRegular from './fonts/OpenSans/OpenSansRegular.ttf';
 
 
 const styles = StyleSheet.create({
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
     },
   },
-  
+
   leftColumn: {
     flexDirection: 'column',
     width: '50%',
@@ -46,55 +46,55 @@ const styles = StyleSheet.create({
       width: 200,
     },
   },
-  
-  
+
+
 });
 
-Font.register( {
+Font.register({
   family: 'Open Sans',
   src: OpenSansRegular,
 });
-Font.register( {
+Font.register({
   family: 'Lato',
   src: LatoRegular,
 });
-Font.register( {
+Font.register({
   family: 'Lato Italic',
   src: LatoItalic,
 });
-Font.register( {
+Font.register({
   family: 'Lato Bold',
   src: LatoBold,
 });
 
 const Resume = (props) => {
-    const {resume, t} = props;
-    
-    return (
+  const { resume, t } = props;
+
+  return (
     <Page {...props} style={styles.page}>
-        <Header resume={props.resume} />
-        <View style={styles.container}>
-            <View style={styles.leftColumn}>
-                <AboutMe t={t} resume={resume} />
-            </View>
-            <View style={styles.leftColumn}>
-                <Education t={t} degrees={resume.degrees} />
-            </View>
+      <Header resume={props.resume} />
+      <View style={styles.container}>
+        <View style={styles.leftColumn}>
+          <AboutMe t={t} resume={resume} />
         </View>
-        <View style={styles.container}>
-            <View style={styles.leftColumn}>
-                <Certifications t={t} certifications={resume.certifications} />
-            </View>
-            <View style={styles.leftColumn}>
-                <Courses t={t} courses={resume.courses} />
-            </View>
+        <View style={styles.leftColumn}>
+          <Education t={t} degrees={resume.degrees} />
         </View>
-        <Experience t={t} positions={resume.positions} />
+      </View>
+      <View style={styles.container}>
+        <View style={styles.leftColumn}>
+          <Certifications t={t} certifications={resume.certifications} />
+        </View>
+        <View style={styles.leftColumn}>
+          <Courses t={t} courses={resume.courses} />
+        </View>
+      </View>
+      <Experience t={t} positions={resume.positions} />
     </Page>
-    )
+  );
 };
 
-export const Output = ({resume, t}) => (
+export const Output = ({ resume, t }) => (
   <Document
     author="Michel Popolin"
     keywords="react, resume, awesome"

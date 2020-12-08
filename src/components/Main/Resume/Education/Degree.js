@@ -1,12 +1,18 @@
 import React from 'react';
 
 const Degree = ({ data }) => (
-    <article className="degree-container">
-        <header>
-            <h4 className="degree">{data.degree}</h4>
-            <p className="school"><a href={data.link}>{data.school}</a>, {data.begin}{data.end && ` - ${data.end}`}</p>
-        </header>
-    </article>
+  <article className="degree-container">
+    <header>
+      <h4 className="degree">{data.degree}</h4>
+      <p className="school">
+        <a href={data.link}>{data.school}</a>
+        ,
+        {' '}
+        {data.begin}
+        {data.end && ` - ${data.end}`}
+      </p>
+    </header>
+  </article>
 );
 
 export default Degree;

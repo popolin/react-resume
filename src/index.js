@@ -10,9 +10,9 @@ import App from './App';
 
 ReactDOM.render(
 
-    <Suspense fallback={<LoadingSpinner />}>
-        <App />
-    </Suspense>,
+  <Suspense fallback={<LoadingSpinner />}>
+    <App />
+  </Suspense>,
 
-    document.getElementById('root'),
+  document.getElementById('root'),
 );

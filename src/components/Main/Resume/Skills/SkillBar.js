@@ -6,8 +6,8 @@ const SkillBar = ({ data, categories }) => {
   // TODO: Consider averaging colors
   const titleStyle = {
     background: categories
-      .filter((cat) => category.includes(cat.name))
-      .map((cat) => cat.color)[0],
+      .filter(cat => category.includes(cat.name))
+      .map(cat => cat.color)[0],
   };
 
   const barStyle = {
@@ -19,7 +19,11 @@ const SkillBar = ({ data, categories }) => {
     <div className="skillbar clearfix">
       <div className="skillbar-title" style={titleStyle}><span>{title}</span></div>
       <div className="skillbar-bar" style={barStyle} />
-      <div className="skill-bar-percent">{competency} / 5</div>
+      <div className="skill-bar-percent">
+        {competency}
+        {' '}
+        / 5
+      </div>
     </div>
   );
 };

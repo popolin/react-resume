@@ -1,10 +1,9 @@
 import React from 'react';
 
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import dayjs from 'dayjs';
 import Title from './Title';
 import List, { Item } from './List';
-import { Text, View, StyleSheet } from '@react-pdf/renderer';
-
-import dayjs from 'dayjs';
 
 
 const styles = StyleSheet.create({
@@ -60,15 +59,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const ExperienceEntry = ({t, locale, experience}) => {
-    const {company, position, begin, end, points} = experience;
-    const beginLocale = dayjs(begin).locale(locale);
-    const beginFormatted = beginLocale.format("MMMM, YYYY");
-    var endFormatted = t('main:resume.experience.present');
-    if(end){
-        const endLocale = dayjs(end).locale(locale);
-        endFormatted = endLocale.format("MMMM, YYYY");
-    }
+const ExperienceEntry = ({ t, locale, experience }) => {
+  const {
+    company, position, begin, end, points,
+  } = experience;
+  const beginLocale = dayjs(begin).locale(locale);
+  const beginFormatted = beginLocale.format('MMMM, YYYY');
+  let endFormatted = t('main:resume.experience.present');
+  if (end) {
+    const endLocale = dayjs(end).locale(locale);
+    endFormatted = endLocale.format('MMMM, YYYY');
+  }
 
   const title = `${company} | ${position}`;
   return (
@@ -92,27 +93,31 @@ const ExperienceEntry = ({t, locale, experience}) => {
   );
 };
 
-const Experience = ({t, positions}) => {
-    const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
-    const locale = currentLanguage === "pt" ? 'pt-br' : 'en';
+const Experience = ({ t, positions }) => {
+  const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
+  const locale = currentLanguage === 'pt' ? 'pt-br' : 'en';
 
-    const positionsOrdered = positions.sort((a, b) => dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1);
-    return (
-        <View style={styles.container}>
-            <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
-                <Title>{t('main:resume.section.experience')}</Title>
-                <Text style={{fontSize: 10, marginLeft: 3, marginBottom: 10}}>({t('main:resume.lastThree')})</Text>
-            </View>
-            {positionsOrdered.filter((pos, idx) => idx < 3).map((position, idx) => (
-            <ExperienceEntry
-                t={t}
-                locale={locale}
-                experience={position}
-                key={`experience-${idx}`}
-            />
-            ))}
-        </View>
-    )
+  const positionsOrdered = positions.sort((a, b) => (dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1));
+  return (
+    <View style={styles.container}>
+      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
+        <Title>{t('main:resume.section.experience')}</Title>
+        <Text style={{ fontSize: 10, marginLeft: 3, marginBottom: 10 }}>
+          (
+          {t('main:resume.lastThree')}
+          )
+        </Text>
+      </View>
+      {positionsOrdered.filter((pos, idx) => idx < 3).map((position, idx) => (
+        <ExperienceEntry
+          t={t}
+          locale={locale}
+          experience={position}
+          key={`experience-${idx}`}
+        />
+      ))}
+    </View>
+  );
 };
 
 export default Experience;
