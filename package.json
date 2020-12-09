@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@react-pdf/renderer": "^1.6.11",
     "@types/jest": "^26.0.18",
     "@types/react": "^17.0.0",
@@ -36,8 +33,6 @@
     "react-scripts": "^4.0.1",
     "react-spinners": "^0.9.0",
     "react-toastify": "^5.2.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.1",
     "styled-components": "^5.2.1",
@@ -55,17 +50,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "rules": {
-      "react/jsx-filename-extension": 0,
-      "operator-linebreak": 0,
-      "react/jsx-wrap-multilines": 0
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "jest": true
-    }
+    ]
   },
   "browserslist": {
     "production": [
@@ -95,7 +80,6 @@
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.13.0",
     "prettier": "^2.2.1",
-    "redux-logger": "^3.0.6",
     "yarn": "^1.22.10"
   }
 }
