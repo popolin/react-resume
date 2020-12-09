@@ -53,6 +53,7 @@
   },
   "eslintConfig": {
     "extends": [
+      "airbnb",
       "react-app",
       "react-app/jest"
     ],
