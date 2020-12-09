@@ -8,6 +8,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-helmet": "^6.1.0",
+    "airbnb": "^0.0.2",
     "axios": "^0.18.1",
     "classnames": "^2.2.6",
     "date-fns": "^1.30.1",
