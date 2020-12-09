@@ -2,14 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 
+import Body from '../../components/Body';
 
-import Main from './Main';
+import { IResume } from '../../components/Body';
 
+interface IndexProps {
+  resume: IResume;
+  updateResume: React.FunctionComponent;
+}
 
-const Index = ({ resume, updateResume }) => {
+const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
   const { t } = useTranslation('main');
   return (
-    <Main resume={resume} updateResume={updateResume}>
+    <Body resume={resume} updateResume={updateResume}>
       <article className="post" id="index">
         <header>
           <div className="title">
@@ -34,20 +39,33 @@ const Index = ({ resume, updateResume }) => {
           <Trans
             i18nKey="main:index.subWelcome"
             components={{
-              netlify: <Link target="_blank" to="https://www.netlify.com/" />,
-              fauna: <Link target="_blank" to="https://fauna.com/" />,
+              linkNetlify: (
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.netlify.com/"
+                >
+                  Netlify
+                </a>
+              ),
+              linkFauna: (
+                <a rel="noreferrer" target="_blank" href="https://fauna.com/">
+                  FaunaDB
+                </a>
+              ),
             }}
           />
         </p>
         <p>
           {' '}
-          {t('index.sourceAvailable')}
-          {' '}
-          <Link to="https://github.com/popolin/react-resume">{t('index.here')}</Link>
+          {t('index.sourceAvailable')}{' '}
+          <a href="https://github.com/popolin/react-resume">
+            {t('index.here')}
+          </a>
           .
         </p>
       </article>
-    </Main>
+    </Body>
   );
 };
 

@@ -9,7 +9,7 @@
         "about": "About this site",
         "decription": "A simple and responsive React App written with modern Javascript.",
         "welcome": "Welcome to my website. Please feel free to read more <about>about me</about>, or you can check out my <resume>resume</resume>, view <stats>site statistics</stats>, or <contact>contact</contact> me.",
-        "subWelcome": "This website is published on <netlify>Netlify</netlify> and the resume JSON persisted on <fauna>FaunaDB<fauna>.",
+        "subWelcome": "This website is published on <linkNetlify>Netlify</linkNetlify> and the resume JSON persisted on <linkFauna>FaunaDB</linkFauna>.",
         "sourceAvailable": "Source available",
         "here": "here"
     },

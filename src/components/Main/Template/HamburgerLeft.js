@@ -1,8 +1,7 @@
 import React, { useState, useRef } from 'react';
 
 import Menu from 'react-burger-menu/lib/menus/slide';
-import {faFileCode} from '@fortawesome/free-solid-svg-icons/faFileCode';
-import {faFile} from '@fortawesome/free-solid-svg-icons/faFile';
+import {FaFileCode, FaFile} from 'react-icons/fa';
 
 import {useTranslation} from "react-i18next";
 
@@ -42,12 +41,12 @@ const HamburgerLeft = ({ resume }) => {
             <Menu left isOpen={menuOpen} >
                 <ToolbarHeader />
                 <ButtonMenu 
-                    icon={faFile}
+                    icon={FaFile}
                     label={t('toolbar.buttonSimple')}
                     labelHover={t('toolbar.buttonSimpleHover')}
                     to='/simple' />
                 <ButtonMenu 
-                    icon={faFileCode}
+                    icon={FaFileCode}
                     label={t('toolbar.buttonJson')}
                     labelHover={t('toolbar.buttonJsonHover')}
                     to='/json' />

@@ -3,7 +3,6 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import dayjs from 'dayjs';
 import Title from './Title';
-import List, { Item } from './List';
 
 const styles = StyleSheet.create({
   title: {
@@ -46,7 +45,7 @@ const Courses = ({ t, courses }) => {
         </Text>
       </View>
       {coursesOrdered.filter((cor, idx) => idx < 3).map((course, i) => (
-        <View key={`course-${i}`} style={{ marginTop: i === 0 ? 0 : 10 }}>
+        <View key={course.title} style={{ marginTop: i === 0 ? 0 : 10 }}>
           <Text style={styles.school}>{course.title}</Text>
           <Text style={styles.degree}>{course.school}</Text>
           <Text style={styles.candidate}>

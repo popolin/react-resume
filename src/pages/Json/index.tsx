@@ -8,11 +8,8 @@ import 'brace/theme/gruvbox';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/';
-import { faSave } from '@fortawesome/free-solid-svg-icons/faSave';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
-
-import Main from './Main';
+import { FaSave, FaArrowRight } from 'react-icons/fa';
+import Body, { IResume } from '../../components/Body';
 
 toast.configure({
   position: 'top-right',
@@ -22,7 +19,6 @@ toast.configure({
   closeOnClick: true,
   closeButton: false,
   rtl: false,
-  pauseOnVisibilityChange: true,
   draggable: true,
   pauseOnHover: true,
   progressStyle: {
@@ -31,13 +27,19 @@ toast.configure({
   bodyClassName: 'resume-toast-body',
 });
 
+interface JsonProps {
+  resume: IResume;
+  updateResume: React.FunctionComponent;
+}
 
-const Json = ({ resume, updateResume }) => {
+const Json: React.FC<JsonProps> = ({ resume, updateResume }) => {
   const { t } = useTranslation('edit');
-  const [editorValue, setEditorValue] = React.useState(JSON.stringify(resume, null, '\t'));
+  const [editorValue, setEditorValue] = React.useState(
+    JSON.stringify(resume, null, '\t'),
+  );
 
   return (
-    <Main resume={resume} updateResume={updateResume} full>
+    <Body resume={resume} updateResume={updateResume} full>
       <Helmet title={t('json.title')} />
 
       <article className="post" id="about">
@@ -51,7 +53,9 @@ const Json = ({ resume, updateResume }) => {
               <Button
                 animated
                 fluid
-                onClick={() => { toast(`❌ Ops... ${t('json.notMe')}`); }}
+                onClick={() => {
+                  toast(`❌ Ops... ${t('json.notMe')}`);
+                }}
                 style={{
                   float: 'right',
                   width: 200,
@@ -62,37 +66,36 @@ const Json = ({ resume, updateResume }) => {
                 }}
               >
                 <Button.Content visible style={{ color: '#646464' }}>
-                  <FontAwesomeIcon icon={faSave} />
+                  <FaSave />
                   {'  '}
                   {t('json.saveChanges')}
                 </Button.Content>
-                <Button.Content hidden style={{ color: '#646464', backgroundColor: '' }}>
+                <Button.Content
+                  hidden
+                  style={{ color: '#646464', backgroundColor: '' }}
+                >
                   {t('json.save')}
                   {'  '}
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FaArrowRight />
                 </Button.Content>
               </Button>
             </div>
           </div>
         </header>
 
-
         <AceEditor
-          mode="json"
           width="100%"
           theme="gruvbox"
           mode="hjson"
           name="json-resume-editor"
           value={editorValue}
-          showLineNumber
+          showGutter
           showPrintMargin={false}
           scrollMargin={[10, 10]}
           tabSize={3}
         />
-
       </article>
-
-    </Main>
+    </Body>
   );
 };
 

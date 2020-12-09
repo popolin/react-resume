@@ -99,9 +99,9 @@ export default ({ resume }) => {
           <Text style={styles.subtitle}>{lastPosition.position}</Text>
         </View>
         <View style={styles.linkColumn}>
-          <Link style={styles.link}>{resume.header.email}</Link>
-          <Link style={styles.link}>{resume.header.phone}</Link>
-          <Link style={styles.link}>{`${resume.header.city}, ${resume.header.state} - ${resume.header.country}`}</Link>
+          <Link to={`mailto:${resume.header.email}`} style={styles.link}>{resume.header.email}</Link>
+          <Link to={`tel:${resume.header.phone}`} style={styles.link}>{resume.header.phone}</Link>
+          <Link to="#" style={styles.link}>{`${resume.header.city}, ${resume.header.state} - ${resume.header.country}`}</Link>
         </View>
       </View>
       <View style={styles.viewFooter}>

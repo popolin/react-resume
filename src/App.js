@@ -3,17 +3,16 @@ import { Route, Switch, Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import classNames from 'classnames';
 
-// import { constants } from './config';
 import { FocusTrap } from './helpers/app.helper';
 import { getResumeNode } from './services/api';
 
-import About from './components/Main/About';
-import Contact from './components/Main/Contact';
-import Resume from './components/Main/Resume';
-import Stats from './components/Main/Stats';
-import Index from './components/Main/Index';
-import Simple from './components/Main/Simple';
-import Json from './components/Main/Json';
+import Index from './pages/Index'
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Stats from './pages/Stats';
+import Resume from './pages/Resume';
+import Json from './pages/Json';
+import Simple from './pages/Simple';
 
 import './static/css/app.css';
 import './static/css/main.scss';
@@ -22,7 +21,6 @@ import CriticalError from './components/Static/CriticalError';
 
 
 const history = createBrowserHistory();
-// const { ROUTES } = constants;
 
 const App = (props) => {
   const [data, setData] = useState({
@@ -63,7 +61,7 @@ const App = (props) => {
     <div className={classNames('App', {})}>
       <Router history={history}>
         <Switch>
-          {/* <Route exact path={ROUTES.HOME.PATH} component={Index} /> */}
+          
           <Route exact path="/" component={props => createRoute(Index, props)} />
           <Route path="/about" component={props => createRoute(About, props)} />
           <Route path="/contact" component={props => createRoute(Contact, props)} />
@@ -71,7 +69,7 @@ const App = (props) => {
           <Route path="/stats" component={props => createRoute(Stats, props)} />
           <Route path="/simple" component={props => createRoute(Simple, props)} />
           <Route path="/json" component={props => createRoute(Json, props)} />
-          {/* <Route component={Index} data={data} /> */}
+          
         </Switch>
       </Router>
       <FocusTrap full={props.editorOpen} mobile={props.toolbarOpen} />

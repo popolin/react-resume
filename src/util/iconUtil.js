@@ -1,9 +1,13 @@
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
-import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
-import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn';
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
-import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
+import React from 'react';
+
+import { FaEnvelope, FaTwitter, FaLinkedin, FaInstagram, FaFacebook, FaGithub } from 'react-icons/fa';
+
+// import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
+// import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
+// import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
+// import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn';
+// import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+// import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 
 const icoGithub = '/images/github.png';
 const icoFacebook = '/images/facebook.png';
@@ -16,17 +20,17 @@ const icoWebsite = '/images/website.png';
 export function getSocialIcon(socialName) {
   switch (socialName) {
     case 'Github':
-      return faGithub;
+      return <FaGithub />;
     case 'Facebook':
-      return faFacebook;
+      return <FaFacebook />;
     case 'Instagram':
-      return faInstagram;
+      return <FaInstagram />;
     case 'LinkedIn':
-      return faLinkedinIn;
+      return <FaLinkedin />;
     case 'Twitter':
-      return faTwitter;
+      return <FaTwitter />;
     case 'Email':
-      return faEnvelope;
+      return <FaEnvelope />;
     default:
       return null;
   }

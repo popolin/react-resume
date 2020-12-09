@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/';
-import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FaTimes } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const CriticalError = ({ message }) => {
@@ -13,8 +12,7 @@ const CriticalError = ({ message }) => {
       </h2>
       <div className="errorDivider" />
       <div>
-        <FontAwesomeIcon
-          icon={faTimes}
+        <FaTimes
           style={{
             display: 'inline-block', float: 'left', width: '6.5em', height: '6.5em',
           }}

@@ -1,8 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import dayjs from 'dayjs';
-
-import Degree from './Education/Degree';
 
 const Certifications = ({ certifications }) => {
   const { t } = useTranslation('main');
