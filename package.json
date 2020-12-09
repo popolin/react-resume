@@ -48,8 +48,12 @@
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
+  
   "eslintConfig": {
-    "extends": "airbnb",
+    "extends": [
+        "react-app",
+        "react-app/jest"
+      ],
     "rules": {
       "react/jsx-filename-extension": 0,
       "operator-linebreak": 0,

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import AceEditor from 'react-ace';
 import { Button } from 'semantic-ui-react';
