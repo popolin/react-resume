@@ -80,8 +80,8 @@ const Contact: React.FC<ContactProps> = ({ resume, updateResume }) => {
   const [isActive, setIsActive] = useState(true); // disable when all messages are printed
 
   useEffect(() => {
-    const interval = setInterval(
-      () => {
+    if (isActive) {
+      const interval = setInterval(() => {
         let newIdx = idx;
         let newChar = char;
         if (char - hold >= messages[idx].length) {
@@ -95,10 +95,10 @@ const Contact: React.FC<ContactProps> = ({ resume, updateResume }) => {
           updateIter(newIdx);
           updateChar(newChar + 1);
         }
-      },
-      isActive ? delay : null,
-    );
-    return () => clearInterval(interval);
+      }, delay);
+      return () => clearInterval(interval);
+    }
+    return undefined;
   }, [char, idx, isActive, messages]);
 
   return (

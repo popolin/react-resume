@@ -3,7 +3,7 @@
 
 ## My always updated Resume (React JS)
 
-This project was created to keep my curriculum informations always updated from a remote json content. 
+This project was created to keep my curriculum informations always updated from a remote json content.
 
 ### Get started
 
