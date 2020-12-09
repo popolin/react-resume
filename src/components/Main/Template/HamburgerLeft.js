@@ -40,22 +40,17 @@ const HamburgerLeft = ({ resume }) => {
             </nav>
             <Menu left isOpen={menuOpen} >
                 <ToolbarHeader />
-                <ButtonMenu 
+                <ButtonMenu
                     icon={FaFile}
                     label={t('toolbar.buttonSimple')}
                     labelHover={t('toolbar.buttonSimpleHover')}
                     to='/simple' />
-                <ButtonMenu 
+                <ButtonMenu
                     icon={FaFileCode}
                     label={t('toolbar.buttonJson')}
                     labelHover={t('toolbar.buttonJsonHover')}
                     to='/json' />
-                {/* <ButtonMenu 
-                    icon={faEdit}
-                    label={t('toolbar.buttonEdit')}
-                    labelHover={t('toolbar.buttonEditHover')}
-                    title="Admin"
-                    onClick={() => console.log('boraaa')} /> */}
+
             </Menu>
         </div>
     );

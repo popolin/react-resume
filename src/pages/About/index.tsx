@@ -26,11 +26,10 @@ const About: React.FC<AboutProps> = ({ resume, updateResume }) => {
   if (currentLanguage === 'pt') {
     docMarkdown = ptMarkdown;
   }
-
   const [markdown, setMarkdown] = React.useState('');
 
   const loadMarkdown = useCallback(() => {
-    fetch(docMarkdown)
+    fetch(docMarkdown.default)
       .then(res => res.text())
       .then(md => {
         setMarkdown(md);

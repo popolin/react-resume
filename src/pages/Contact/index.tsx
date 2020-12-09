@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,7 @@ const messagesEn = [
   'ola',
   'you-can-email-me-anything! really',
   'well, not-anything. but-most-things',
+  'my email address is',
   'mail',
   'i-am-a-react-enthusiastic',
   'also-entrepreneur',
@@ -26,6 +27,8 @@ const messagesEn = [
   'an-idea',
   "I'll-stop-distracting-you-now",
   'thanks',
+  'take-care',
+  'see ya',
 ];
 
 const messagesPt = [
@@ -35,6 +38,7 @@ const messagesPt = [
   'hello',
   'voce-pode-me-escrever-tudo! de-verdade!',
   'enfim, nao tudo. mas quase...',
+  'meu email é',
   'mail',
   'sou-um-entusiasta-react',
   'tambem-sou-empreendedor',
@@ -44,9 +48,10 @@ const messagesPt = [
   'trabalhe-para-nos',
   'ajuda',
   'admin',
-  'uma-deia',
+  'uma-ideia',
   'Vou-parar-de-distrair-voce-agora',
   'obrigado',
+  'se liga',
 ];
 
 const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
@@ -66,32 +71,35 @@ const Contact: React.FC<ContactProps> = ({ resume, updateResume }) => {
       ? messagesPt.map(message => (message === 'mail' ? mailName : message))
       : messagesEn.map(message => (message === 'mail' ? mailName : message));
 
-  // const hold = 50; // ticks to wait after message is complete before rendering next message
-  // const delay = 50; // tick length in mS
+  const hold = 50; // ticks to wait after message is complete before rendering next message
+  const delay = 30; // tick length in mS
 
   const [idx, updateIter] = useState(0); // points to current message
   const [message, updateMessage] = useState(messages[idx]);
-  // const [char, updateChar] = useState(messages[idx].length); // points to current char
+  const [char, updateChar] = useState(messages[idx].length); // points to current char
   const [isActive, setIsActive] = useState(true); // disable when all messages are printed
 
-  // useInterval(
-  //   () => {
-  //     let newIdx = idx;
-  //     let newChar = char;
-  //     if (char - hold >= messages[idx].length) {
-  //       newIdx += 1;
-  //       newChar = 0;
-  //     }
-  //     if (newIdx === messages.length) {
-  //       setIsActive(false);
-  //     } else {
-  //       updateMessage(messages[newIdx].slice(0, newChar));
-  //       updateIter(newIdx);
-  //       updateChar(newChar + 1);
-  //     }
-  //   },
-  //   isActive ? delay : null,
-  // );
+  useEffect(() => {
+    const interval = setInterval(
+      () => {
+        let newIdx = idx;
+        let newChar = char;
+        if (char - hold >= messages[idx].length) {
+          newIdx += 1;
+          newChar = 0;
+        }
+        if (newIdx === messages.length) {
+          setIsActive(false);
+        } else {
+          updateMessage(messages[newIdx].slice(0, newChar));
+          updateIter(newIdx);
+          updateChar(newChar + 1);
+        }
+      },
+      isActive ? delay : null,
+    );
+    return () => clearInterval(interval);
+  }, [char, idx, isActive, messages]);
 
   return (
     <Body resume={resume} updateResume={updateResume}>
