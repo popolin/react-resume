@@ -35,9 +35,8 @@ interface JsonProps {
 
 const Json: React.FC<JsonProps> = ({ resume, updateResume }) => {
   const { t } = useTranslation('edit');
-  const [editorValue, setEditorValue] = React.useState(
-    JSON.stringify(resume, null, '\t'),
-  );
+
+  const editorValue = JSON.stringify(resume, null, '\t');
 
   return (
     <Body resume={resume} updateResume={updateResume} full>

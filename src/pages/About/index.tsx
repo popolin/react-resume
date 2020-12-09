@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import path from 'path';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import ReactMarkdown from 'react-markdown';

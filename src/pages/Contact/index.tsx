@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
@@ -51,24 +51,6 @@ const messagesPt = [
 
 const currentLanguage = localStorage.getItem('@react-resume/language') || 'en';
 
-// const useInterval = (callback, delay) => {
-//   const savedCallback = useRef();
-
-//   useEffect(() => {
-//     savedCallback.current = callback;
-//   }, [callback]);
-
-//   useEffect(() => {
-//     if (delay) {
-//       const id = setInterval(() => {
-//         savedCallback.current();
-//       }, delay);
-//       return () => clearInterval(id);
-//     }
-//     return () => {}; // pass linter
-//   }, [delay]);
-// };
-
 interface ContactProps {
   resume: IResume;
   updateResume: React.FunctionComponent;
@@ -84,32 +66,32 @@ const Contact: React.FC<ContactProps> = ({ resume, updateResume }) => {
       ? messagesPt.map(message => (message === 'mail' ? mailName : message))
       : messagesEn.map(message => (message === 'mail' ? mailName : message));
 
-  const hold = 50; // ticks to wait after message is complete before rendering next message
-  const delay = 50; // tick length in mS
+  // const hold = 50; // ticks to wait after message is complete before rendering next message
+  // const delay = 50; // tick length in mS
 
   const [idx, updateIter] = useState(0); // points to current message
   const [message, updateMessage] = useState(messages[idx]);
-  const [char, updateChar] = useState(messages[idx].length); // points to current char
+  // const [char, updateChar] = useState(messages[idx].length); // points to current char
   const [isActive, setIsActive] = useState(true); // disable when all messages are printed
 
-  //   useInterval(
-  //     () => {
-  //       let newIdx = idx;
-  //       let newChar = char;
-  //       if (char - hold >= messages[idx].length) {
-  //         newIdx += 1;
-  //         newChar = 0;
-  //       }
-  //       if (newIdx === messages.length) {
-  //         setIsActive(false);
-  //       } else {
-  //         updateMessage(messages[newIdx].slice(0, newChar));
-  //         updateIter(newIdx);
-  //         updateChar(newChar + 1);
-  //       }
-  //     },
-  //     isActive ? delay : null,
-  //   );
+  // useInterval(
+  //   () => {
+  //     let newIdx = idx;
+  //     let newChar = char;
+  //     if (char - hold >= messages[idx].length) {
+  //       newIdx += 1;
+  //       newChar = 0;
+  //     }
+  //     if (newIdx === messages.length) {
+  //       setIsActive(false);
+  //     } else {
+  //       updateMessage(messages[newIdx].slice(0, newChar));
+  //       updateIter(newIdx);
+  //       updateChar(newChar + 1);
+  //     }
+  //   },
+  //   isActive ? delay : null,
+  // );
 
   return (
     <Body resume={resume} updateResume={updateResume}>
