@@ -2,7 +2,7 @@
 #### Intro
 Atualmente estou codificando na [Trix](https://trixti.com.br), onde trabalho como engenheiro de software construindo ferramentas para a área de saúde. Minhas principais atividades são: cientista de dados e full stack dev.
 <br>
-Estou disponível para consultoria em projetos interessantes. Tenho interesse em trabalhar com Ruby NodeJS e React e as minhas áreas de interesse para atuação são: impacto social, saúde e educação. Caso queira conversar, moro em Brasília (Brasil), estou disponível para vídeo chamadas e também tenho disponibilidade para viagens pelo mundo.
+Estou disponível para consultoria em projetos interessantes. Tenho preferência em trabalhar com NodeJS, ReactJS e React Native e as minhas áreas de interesse para atuação são: impacto social, saúde e educação. Caso queira conversar, moro em Brasília (Brasil), estou disponível para vídeo chamadas e também tenho disponibilidade para viagens pelo mundo.
 <br><br>
 #### Atualmente
 Na Trix lido com minha equipe e desde 2020 essa tarefa começou a ser remota, o que a tornou mais complicada. Também estou trabalhando com grandes aplicações WEB e aplicativos interessantes feitos com Java  e React Native.
