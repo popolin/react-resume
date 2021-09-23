@@ -12,6 +12,7 @@ export const getResumeNode = async (language) => {
     );
     return ret.data.resume;
   } catch (error) {
+    console.log(error);
     return null;
   }
 };

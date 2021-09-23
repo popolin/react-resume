@@ -11,6 +11,7 @@ import imgReact from '../../../assets/i_react.png';
 import imgReactNative from '../../../assets/i_react_native.png';
 import imgRails from '../../../assets/i_rails.png';
 import imgJava from '../../../assets/i_java2.png';
+import imgJsnsd from '../../../assets/jsnsd.png';
 
 
 const Nav = ({ resume }) => {
@@ -67,7 +68,16 @@ const Nav = ({ resume }) => {
           </div>
           <p><a href={`mailto:${resume.header.email}`}>{resume.header.email}</a></p>
         </header>
+        <a
+          href="https://www.credly.com/badges/f117f2e4-b6f1-44ea-b032-7dc974de924b/public_url"
+          target="_blank"
+          style={{
+            borderBottom: 'none'
+          }}>
+          <img src={imgJsnsd} alt="JavJSNSDa" width={80} style={{ margin: 2 }} />
+        </a>
       </section>
+
 
       <section className="blurb">
         <h2>{t('nav.about')}</h2>
