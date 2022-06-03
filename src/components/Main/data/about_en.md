@@ -1,10 +1,7 @@
 #### Intro
-I am coding at [Trix](https://trixti.com.br) where I work on software engineering build tools to health area. My primary job functions are as a data scientist and software engineer.
+I'm currently coding at [BairesDev](https://www.bairesdev.com) where I work as a software engineer. My main activities are: coding solutions in NodeJS and ReactJS. I use SOLID principles, TypeScript, ESLint and several other tools that help with code quality and teamwork. I really enjoy suggesting alternatives and refactoring code.
 <br>
-I am available to consult on interesting projects. I am particularly interested on NodeJS ReactJS and React Native languages and the areas I would prefer are social impact, health and education. If you would like to arrange a meeting, I am based in Brasilia (Brazil), I am available to videos and can to travel worldwide.
-<br><br>
-#### Currently
-At Trix I am dealing with a team, since 2020 we start working remotely and that became hardlier. I'm also dealing with large web applications and interesting Java Android Apps and mobile React Native apps.
+I'm also interested in working with Next, React Native, Prisma and others. I like to be up to date about new technologies.
 <br><br>
 #### Some history
 

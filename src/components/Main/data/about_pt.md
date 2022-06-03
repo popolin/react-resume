@@ -1,11 +1,8 @@
 
 #### Intro
-Atualmente estou codificando na [Trix](https://trixti.com.br), onde trabalho como engenheiro de software construindo ferramentas para a área de saúde. Minhas principais atividades são: cientista de dados e full stack dev.
+Atualmente estou codificando na [BairesDev](https://www.bairesdev.com/), onde trabalho como engenheiro de software. Minhas principais atividades são: codificar soluções em NodeJS e ReactJS. Utilizo princípios SOLID, TypeScript, ESLint e diversas outras ferramentas que auxiliam na qualidade do código e no trabalho em equipe. Gosto muito de sugerir alternativas e refatorar código.
 <br>
-Estou disponível para consultoria em projetos interessantes. Tenho preferência em trabalhar com NodeJS, ReactJS e React Native e as minhas áreas de interesse para atuação são: impacto social, saúde e educação. Caso queira conversar, moro em Brasília (Brasil), estou disponível para vídeo chamadas e também tenho disponibilidade para viagens pelo mundo.
-<br><br>
-#### Atualmente
-Na Trix lido com minha equipe e desde 2020 essa tarefa começou a ser remota, o que a tornou mais complicada. Também estou trabalhando com grandes aplicações WEB e aplicativos interessantes feitos com Java  e React Native.
+Também tenho interesse em trabalhar com Next, React Native, Prisma e outros. Gosto de estar atualizado.
 <br><br>
 #### Um pouco de história
 
