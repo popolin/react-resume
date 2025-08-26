@@ -1,11 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import AceEditor from 'react-ace';
 import { Button } from 'semantic-ui-react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import 'brace/mode/hjson';
-import 'brace/theme/gruvbox';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
@@ -82,18 +79,6 @@ const Json: React.FC<JsonProps> = ({ resume, updateResume }) => {
             </div>
           </div>
         </header>
-
-        <AceEditor
-          width="100%"
-          theme="gruvbox"
-          mode="hjson"
-          name="json-resume-editor"
-          value={editorValue}
-          showGutter
-          showPrintMargin={false}
-          scrollMargin={[10, 10]}
-          tabSize={3}
-        />
       </article>
     </Body>
   );
