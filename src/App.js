@@ -3,8 +3,8 @@ import { Route, Switch, Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import classNames from 'classnames';
 
+import { resume } from './util/content';
 import { FocusTrap } from './helpers/app.helper';
-import { getResumeNode } from './services/api';
 
 import Index from './pages/Index'
 import About from './pages/About';
@@ -37,14 +37,16 @@ const App = (props) => {
 
   const updateResume = async () => {
     const locate = localStorage.getItem('@react-resume/language') || 'en';
-    getResumeNode(locate).then((resume) => {
-      if (resume == null) {
-        const message = locate === 'pt' ? 'Curriculo não localizado na base de dados' : 'Resume not found at database';
-        setData({ ...data, error: message });
-      } else {
-        setData({ ...data, resume });
-      }
-    });
+    
+    setData({ ...data, resume });
+    // getResumeNode(locate).then((resume) => {
+    //   if (resume == null) {
+    //     const message = locate === 'pt' ? 'Curriculo não localizado na base de dados' : 'Resume not found at database';
+    //     setData({ ...data, error: message });
+    //   } else {
+    //     setData({ ...data, resume });
+    //   }
+    // });
   };
 
   if (data.error) {

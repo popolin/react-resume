@@ -27,7 +27,7 @@ export interface ICategory {
 }
 export interface IPosition {
   begin: string;
-  end: string;
+  end?: string;
   company: string;
   position: string;
   points: string[];
@@ -40,16 +40,23 @@ export interface ICourse {
   duration: string;
 }
 export interface ICertification {
-  shortName: string;
-  title: string;
+  shortName?: string;
+  from?: string;
+  // title: string;
+  tests: {
+    shortName: string;
+    title?: string;
+  }[];
 }
 export interface IResume {
   header: {
+    name: string;
     shortName: string;
     email: string;
     city: string;
     country: string;
     birthdate: string;
+    photo: string;
   };
   contacts: IContact[];
   countries: {
@@ -66,6 +73,7 @@ export interface IResume {
 interface MainProps {
   resume: IResume;
   updateResume: React.FunctionComponent;
+  // eslint-disable-next-line react/require-default-props
   full?: boolean;
 }
 

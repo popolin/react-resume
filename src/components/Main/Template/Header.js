@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
-import HamburgerLeft from './HamburgerLeft';
+// import HamburgerLeft from './HamburgerLeft';
+// import languages from '../data/languages';
 import routes from '../data/routes';
-import languages from '../data/languages';
 
 import {useTranslation} from "react-i18next";
 
@@ -21,7 +21,7 @@ const Header = ({ resume, updateResume }) => {
 
     return (
         <header id="header">
-            <HamburgerLeft resume={resume} />
+            {/* <HamburgerLeft resume={resume} /> */}
 
             <h1 className="index-link" style={{marginLeft: 30}}>
                 <Link to="/">{resume.header.shortName}</Link>
@@ -37,11 +37,11 @@ const Header = ({ resume, updateResume }) => {
             </nav>
             <nav className="links-right">
                 <ul>
-                {languages.filter((l) => !l.index).map((l, indice) => (
+                {/* {languages.filter((l) => !l.index).map((l, indice) => (
                     <li key={`in${indice}`}>
                         <Link onClick={() => changeLanguage(l.locale)} to={`#`}>{l.flag}</Link>
                     </li>
-                ))}
+                ))} */}
                 </ul>
             </nav>
             

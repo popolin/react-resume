@@ -9,15 +9,15 @@
         "about": "About this site",
         "decription": "A simple and responsive React App written with modern Javascript.",
         "welcome": "Welcome to my website. Please feel free to read more <about>about me</about>, or you can check out my <resume>resume</resume>, view <stats>site statistics</stats>, or <contact>contact</contact> me.",
-        "subWelcome": "This website is published on <linkNetlify>Netlify</linkNetlify> and the resume JSON persisted on <linkFauna>FaunaDB</linkFauna>.",
+        "subWelcome": "This website is published on <linkNetlify>Netlify</linkNetlify>",
         "sourceAvailable": "Source available",
         "here": "here"
     },
     "nav": {
         "about": "About",
         "learnMore": "Learn more",
-        "description1": "Hi, I'm {{firstName}}. I like building things and have been coding for {{yearsExperience}} years. I am {{lastGraduation}} at <school>{{lastGraduationSchool}}</school>. ",
-        "description2": "Currently I am {{latCompanyPosition}} at <lastCompany>{{latCompany}}</lastCompany>. Before <lastCompany>{{latCompany}}</lastCompany> I was at <penultCompany>{{penultCompany}}</penultCompany>, <beforePenultCompany>{{beforePenultCompany}}</beforePenultCompany> and <others>others</others>."
+        "description1": "Hi, I'm {{firstName}} 👋 I love building things that make an impact! With {{yearsExperience}}+ years in software engineering and a postgraduate degree in Distributed Systems, I specialize in designing scalable, efficient, and maintainable systems.",
+        "description2": "I’ve worked with global companies like ClearCo, PayPal, Clipboard Health, and Digital Trends, creating innovative solutions using technologies like Node.js, NestJS, Vue.js, and React. Always curious, always learning, always building."
     },
     "about": {
         "title": "About me",
