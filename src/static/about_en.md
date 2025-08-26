@@ -33,23 +33,24 @@ Over my career, I’ve built impactful systems in healthcare, fintech, and educa
 - In 2015, I joined Trix TI to build apps for clinics and laboratories, working on impactful solutions for healthcare. During this time, I also had the chance to travel across Brazil.
 
 - In 2021, two incredible things happened in my life:
+  - Personal: My daughter was born - the biggest love of my life and my greatest source of inspiration. ❤️
+  - Professional: I started working for U.S.-based companies such as Digital Trends, Clipboard Health, and PayPal, marking another major milestone and opening the door to global projects.
 
-1. Personal: My daughter was born — the biggest love of my life and my greatest source of inspiration. ❤️
+- Almost three years later, I joined ClearCo, a Canadian-based company, which has challenged and inspired me every day.
 
-2. Professional: I started working for U.S.-based companies such as Digital Trends, Clipboard Health, and PayPal, marking another major milestone and opening the door to global projects.
+- The following year brought an unforgettable experience: I had the chance to met my team in person during an on-site in Toronto, Canada. Dude, that was awesome!
 
-- In 2023, I joined ClearCo, a Canadian-based company, which has challenged and inspired me every day.
-
-- In 2024, I had the chance to meet my team in person during an on-site in Toronto, Canada. Dude, that was awesome — I felt lucky and grateful to be part of such an amazing team.
+- In 2025, a lifelong dream came true: my family and I moved to the U.S., starting a new chapter filled with opportunities, growth, and exciting challenges.
 
 And of course, there are many more stories — but some are best told in person. 😉
 
 <br><br>
+
 #### I like
 - Movies 🎬
-- Playing tennis 🎾
-- Working out 💪
-- Traveling ✈️
+- Playing tennis
+- Working out
+- Traveling
 
 #### I dream of
 

@@ -36,6 +36,18 @@ const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
           />
         </p>
         <p>
+          Here you can:
+          <ul>
+            <li>
+              Learn more <Link to="/about">about me</Link> and
+              <Link to="/resume"> my journey</Link>
+            </li>
+            <li>
+              Get in <Link to="/contact">touch with me</Link>
+            </li>
+          </ul>
+        </p>
+        <p>
           <Trans
             i18nKey="main:index.subWelcome"
             components={{
