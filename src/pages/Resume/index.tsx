@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import { useTranslation } from 'react-i18next';
 
+import { FaDownload } from 'react-icons/fa';
+
 import Body, { IResume } from '../../components/Body';
 import Education from '../../components/Main/Resume/Education';
 import Experience from '../../components/Main/Resume/Experience';
@@ -36,9 +38,24 @@ const Resume: React.FC<ResumeProps> = ({ resume, updateResume }) => {
       <article className="post" id="resume">
         <header>
           <div className="title">
-            <h2>
-              <Link to="resume">{t('resume.title')}</Link>
-            </h2>
+            <span
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <h2>
+                <Link to="resume">{t('resume.title')}</Link>
+              </h2>
+              <a
+                target="_blank"
+                href="/documents/Michel_Popolin_ATS_Resume.pdf"
+                style={{ fontSize: 14, marginLeft: 20, marginBottom: 20 }}
+              >
+                <FaDownload style={{ marginRight: 4 }} />
+                Download ATS
+              </a>
+            </span>
             <div className="link-container">
               {sections.map(sec => (
                 <h4 key={sec}>
