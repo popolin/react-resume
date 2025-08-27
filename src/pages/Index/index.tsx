@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 
+import dayjs from 'dayjs';
 import Body from '../../components/Body';
 
 import { IResume } from '../../components/Body';
@@ -12,6 +13,12 @@ interface IndexProps {
 }
 
 const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
+  const positionsOrdered = resume.positions.sort((a, b) =>
+    dayjs(a.begin).isBefore(dayjs(b.begin)) ? 1 : -1,
+  );
+  const firstPosition = positionsOrdered[positionsOrdered.length - 1];
+  const yearsExperience = dayjs().year() - dayjs(firstPosition.begin).year();
+
   const { t } = useTranslation('main');
   return (
     <Body resume={resume} updateResume={updateResume}>
@@ -27,6 +34,9 @@ const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
         <p>
           <Trans
             i18nKey="main:index.welcome"
+            values={{
+              yearsExperience,
+            }}
             components={{
               about: <Link to="/about" />,
               resume: <Link to="/resume" />,
@@ -35,7 +45,7 @@ const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
             }}
           />
         </p>
-        <p>
+        <span>
           Here you can:
           <ul>
             <li>
@@ -46,7 +56,7 @@ const Index: React.FC<IndexProps> = ({ resume, updateResume }) => {
               Get in <Link to="/contact">touch with me</Link>
             </li>
           </ul>
-        </p>
+        </span>
         <p>
           <Trans
             i18nKey="main:index.subWelcome"

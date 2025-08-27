@@ -23,7 +23,7 @@ const Job = ({ data }) => {
     <article className="jobs-container">
       <header>
         <h4>
-          <a href={data.link}>{data.company}</a>
+          <a href={data.link} target='_blank'>{data.company}</a>
           {' '}
           -
           {' '}

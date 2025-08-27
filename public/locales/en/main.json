@@ -8,7 +8,7 @@
     "index": {
         "about": "About this site",
         "decription": "Welcome to my personal website! 👋",
-        "welcome": "I’m Michel Popolin, a Senior Software Engineer with over 22 years of experience building scalable, high-performance solutions for companies like ClearCo, PayPal, Digital Trends, and Clipboard Health.",
+        "welcome": "I’m Michel Popolin, a Senior Software Engineer with over {{yearsExperience}}+ years of experience building scalable, high-performance solutions for companies like ClearCo, PayPal, Digital Trends, and Clipboard Health.",
         "subWelcome": "This website is a simple, responsive React app, published on <linkNetlify>Netlify</linkNetlify> and built with modern JavaScript.",
         "sourceAvailable": "You can also find the",
         "here": "source code here"

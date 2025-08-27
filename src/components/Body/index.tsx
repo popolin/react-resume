@@ -29,6 +29,7 @@ export interface IPosition {
   begin: string;
   end?: string;
   company: string;
+  link?: string;
   position: string;
   points: string[];
 }

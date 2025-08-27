@@ -25,12 +25,14 @@ export const resume: IResume = {
       degree:
         'Postgraduation - Specialization in Distributed Systems and Object Orientation',
       school: 'Universidade de Brasília',
+      link: 'http://ft.unb.br',
       begin: '2005',
       end: '2007',
     },
     {
       degree: "Bachelor's degree in Computer Science",
       school: 'Universidade Paulista',
+      link: 'https://unip.br',
       begin: '2001',
       end: '2005',
     },
@@ -156,19 +158,21 @@ export const resume: IResume = {
   positions: [
     {
       begin: '2023-04-26',
-      company: 'ClearCo (via Taller Technologies)',
+      link: 'https://clear.co',
+      company: 'ClearCo',
       position: 'Senior Software Engineer',
       points: [
         'Worked on software development using NestJS and VueJS.',
-        'Created architecture diagrams consolidating documentation.',
+        'Led the modernization of the frontend stack, migrating from Node 14, Vue 2, vue-cli, and Jest to Node 20, Vue3+TS, Vite and Vitest, improving performance, maintainability, and dev experience',
         'Developed Feature Flags system, reducing costs by eliminating a prior paid platform.',
-        'Participated in Agile ceremonies: daily standups, plannings, retrospectives.',
+        'Participated in team standups, retrospectives, and company-wide all-hands meetings.',
       ],
     },
     {
       begin: '2022-03-17',
       end: '2023-03-31',
-      company: 'PayPal (via Taller Technologies)',
+      link: 'https://www.paypal.com',
+      company: 'PayPal',
       position: 'Javascript Web Developer',
       points: [
         'Developed signup and onboarding flows in Node.js and ReactJS.',
@@ -180,7 +184,8 @@ export const resume: IResume = {
     {
       begin: '2022-03-14',
       end: '2023-03-18',
-      company: 'Clipboard Health (via BairesDev)',
+      link: 'https://www.clipboardhealth.com',
+      company: 'Clipboard Health',
       position: 'Senior Software Engineer',
       points: [
         'Migrated Express endpoints to NestJS as company standard.',
@@ -192,7 +197,8 @@ export const resume: IResume = {
     {
       begin: '2021-02-22',
       end: '2022-03-15',
-      company: 'Digital Trends (via BairesDev)',
+      link: 'https://www.digitaltrends.com',
+      company: 'Digital Trends',
       position: 'Senior Software Engineer',
       points: [
         'Refactored architecture for maintainability and readability.',
@@ -204,6 +210,7 @@ export const resume: IResume = {
     {
       begin: '2015-06-10',
       end: '2021-02-07',
+      link: 'https://www.trixti.com.br',
       company: 'Trix Tecnologia',
       position: 'Software Architect',
       points: [
@@ -216,6 +223,7 @@ export const resume: IResume = {
     {
       begin: '2016-06-10',
       end: '2019-02-07',
+      link: 'https://www.saintsolutions.com.br',
       company: 'Saint Solutions',
       position: 'Software Architect',
       points: [
@@ -240,7 +248,8 @@ export const resume: IResume = {
     {
       begin: '2008-05',
       end: '2012-07',
-      company: 'TBA Group',
+      link: 'https://www.globalweb.com.br',
+      company: 'Global Web',
       position: 'Java Tech Lead / Architect',
       points: [
         'Led architecture and development for Brazil’s largest telecom operator.',
@@ -251,6 +260,7 @@ export const resume: IResume = {
     {
       begin: '2006-08',
       end: '2008-05',
+      link: 'https://www.nct.com.br',
       company: 'NCT Informática',
       position: 'Systems Analyst',
       points: [
@@ -262,6 +272,7 @@ export const resume: IResume = {
     {
       begin: '2004-10',
       end: '2006-08',
+      link: 'https://en.wikipedia.org/wiki/Politec',
       company: 'Politec Informática',
       position: 'Systems Analyst',
       points: [
@@ -274,6 +285,7 @@ export const resume: IResume = {
     {
       begin: '2003-03',
       end: '2004-10',
+      link: 'https://www.cast4it.com/en',
       company: 'CastMeta Informática',
       position: 'Java Developer',
       points: [
@@ -284,23 +296,32 @@ export const resume: IResume = {
     {
       begin: '2003-02',
       end: '2003-10',
+      link: 'https://en.wikipedia.org/wiki/Politec',
       company: 'Politec Informática',
       position: 'Java Programmer',
       points: [
         'Worked across two banking systems using Struts, JNI, and Hibernate.',
         'Co-created a persistence framework for database access.',
-        'Company link: http://www.politec.com.br',
+      ],
+    },
+    {
+      begin: '2002-03',
+      end: '2003-02',
+      link: 'https://www.unimed.coop.br/site/web/centrooeste',
+      company: 'Unimed CO',
+      position: 'Java Programmer Trainee',
+      points: [
+        'Developed a desktop app to handle the transfer of internal files, such as authorizations, costs, and blockers.',
+        'Built using Java and Swing, ensuring reliability and better integration between Unimeds',
       ],
     },
     {
       begin: '2001-03',
       end: '2002-03',
-      company: 'Vivo',
-      position: 'Java/Oracle Trainee',
-      points: [
-        'Developed reports and stored procedures on SQL Server.',
-        'Company link: http://www.vivo.com.br',
-      ],
+      company: 'TCO (currently VIVO)',
+      link: 'https://en.wikipedia.org/wiki/Centro-Oeste_Celular',
+      position: 'SQL Server Trainee',
+      points: ['Developed reports and stored procedures on SQL Server.'],
     },
   ],
   courses: [
