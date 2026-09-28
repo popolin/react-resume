@@ -2,17 +2,18 @@ import { IResume } from '../components/Body';
 
 export const resume: IResume = {
   header: {
-    name: 'Michel Popolin de Freitas',
+    name: 'Michel Popolin',
     shortName: 'Michel Popolin',
     email: 'micpopolin@gmail.com',
     city: 'Orlando',
-    country: 'United States',
+    country: 'FL, United States',
     birthdate: '1981-07-01',
     photo: 'https://avatars.githubusercontent.com/u/8530763',
   },
 
   contacts: [
     { label: 'Email', link: 'mailto:micpopolin@gmail.com' },
+    { label: 'Phone', link: 'tel:+16893335000' },
     { label: 'LinkedIn', link: 'https://www.linkedin.com/in/popolin/' },
     { label: 'Github', link: 'https://github.com/popolin' },
   ],
@@ -22,306 +23,88 @@ export const resume: IResume = {
   },
   degrees: [
     {
-      degree:
-        'Postgraduation - Specialization in Distributed Systems and Object Orientation',
-      school: 'Universidade de Brasília',
+      degree: 'Postgraduate Degree in Distributed Computing and OO Architecture',
+      school: 'Universidade de Brasília (UnB)',
       link: 'http://ft.unb.br',
       begin: '2005',
       end: '2007',
     },
     {
-      degree: "Bachelor's degree in Computer Science",
-      school: 'Universidade Paulista',
+      degree: "Bachelor's Degree in Computer Science",
+      school: 'Universidade Paulista (UNIP)',
       link: 'https://unip.br',
-      begin: '2001',
-      end: '2005',
+      begin: '2000',
+      end: '2004',
     },
   ],
   skills: [
-    {
-      category: ['Programming Languages'],
-      competency: 'Expert',
-      title: 'Java, JavaScript, TypeScript',
-    },
-    {
-      category: ['Programming Languages'],
-      competency: 'Advanced',
-      title: 'SQL, HTML5, CSS3, JSON, XML',
-    },
-
-    // --- Backend Development ---
-    {
-      category: ['Backend'],
-      competency: 'Expert',
-      title: 'Node.js, NestJS, Express.js',
-    },
-    {
-      category: ['Backend'],
-      competency: 'Advanced',
-      title: 'Java EE, JPA, EJB, WebServices, JSP/Servlets',
-    },
-    {
-      category: ['Backend'],
-      competency: 'Advanced',
-      title: 'REST API Design, GraphQL',
-    },
-
-    // --- Frontend Development ---
-    {
-      category: ['Frontend'],
-      competency: 'Expert',
-      title: 'Vue.js, React.js',
-    },
-    {
-      category: ['Frontend'],
-      competency: 'Advanced',
-      title: 'Next.js, Nuxt.js, Microfrontends',
-    },
-    {
-      category: ['Frontend'],
-      competency: 'Intermediate',
-      title: 'RichFaces, JSF, Bootstrap, Tailwind',
-    },
-
-    // --- Mobile Development ---
-    {
-      category: ['Mobile'],
-      competency: 'Advanced',
-      title: 'React Native, Ionic, Capacitor',
-    },
-    {
-      category: ['Mobile'],
-      competency: 'Intermediate',
-      title: 'Java (Android), Swift (iOS)',
-    },
-
-    // --- Databases ---
-    {
-      category: ['Databases'],
-      competency: 'Advanced',
-      title: 'PostgreSQL, MySQL, SQL Server, Oracle, MongoDB',
-    },
-    {
-      category: ['Databases'],
-      competency: 'Intermediate',
-      title: 'Caché Database',
-    },
-
-    // --- Architecture & Best Practices ---
-    {
-      category: ['Architecture'],
-      competency: 'Expert',
-      title: 'Object-Oriented Programming (OOP), SOLID Principles',
-    },
-    {
-      category: ['Architecture'],
-      competency: 'Expert',
-      title: 'Clean Code, Design Patterns, Software Architecture',
-    },
-    {
-      category: ['Architecture'],
-      competency: 'Advanced',
-      title: 'Distributed Systems, Microservices',
-    },
-
-    // --- Tools & Ecosystem ---
-    {
-      category: ['Tools'],
-      competency: 'Advanced',
-      title: 'Git, Docker, Kubernetes, Jenkins, CI/CD',
-    },
-    {
-      category: ['Tools'],
-      competency: 'Intermediate',
-      title: 'ElasticSearch, Radar.com, Sentry, Grafana',
-    },
-
-    // --- Cloud Platforms ---
-    {
-      category: ['Cloud'],
-      competency: 'Intermediate',
-      title: 'AWS, Azure',
-    },
-
-    // --- Testing ---
-    {
-      category: ['Testing'],
-      competency: 'Advanced',
-      title: 'Unit Testing, Integration Testing, End-to-End Testing',
-    },
-    {
-      category: ['Testing'],
-      competency: 'Intermediate',
-      title: 'Vitest, Jest, Cypress',
-    },
+    { category: ['Languages & Runtimes'], competency: 'Expert', title: 'Node.js (v14–v24+), TypeScript, JavaScript (ES6+), Java, Ruby on Rails, HTML5/CSS3' },
+    { category: ['Backend & Architecture'], competency: 'Expert', title: 'NestJS, Express.js, GraphQL, RESTful Microservices, BFF, Event-Driven Architecture, Prisma ORM' },
+    { category: ['Frontend & Mobile'], competency: 'Expert', title: 'Vue.js 2/3, Vite, React, React Native, Next.js, Ionic, Capacitor' },
+    { category: ['Databases, Caching & Messaging'], competency: 'Advanced', title: 'PostgreSQL, MongoDB, RabbitMQ, Redis, Elasticsearch, Google Cloud Pub/Sub' },
+    { category: ['DevOps & Observability'], competency: 'Advanced', title: 'AWS, GCP, Docker, Kubernetes, Terraform, Grafana, Sentry, Datadog, Auth0, Bitrise' },
+    { category: ['Testing & Quality'], competency: 'Advanced', title: 'Vitest, Playwright, Jest, Unit Testing, E2E Testing Strategies' },
   ],
   positions: [
     {
-      begin: '2023-04-26',
+      begin: '2023-04',
       link: 'https://clear.co',
       company: 'ClearCo',
       position: 'Senior Software Engineer',
       points: [
-        'Worked on software development using NestJS and VueJS.',
-        'Led the modernization of the frontend stack, migrating from Node 14, Vue 2, vue-cli, and Jest to Node 20, Vue3+TS, Vite and Vitest, improving performance, maintainability, and dev experience',
-        'Developed Feature Flags system, reducing costs by eliminating a prior paid platform.',
-        'Participated in team standups, retrospectives, and company-wide all-hands meetings.',
+        'Spearheaded Node.js 16 to Node.js 24 migration and Vue 2 to Vue 3 modernization with Vite, TypeScript, Vitest, and Playwright.',
+        'Slashed critical API response times by approximately 86%, from 12 seconds to 1.6 seconds, by eliminating N+1 queries, adding targeted indexes, and bounding I/O concurrency.',
+        'Architected event-driven microservice pipelines with GCP Pub/Sub, RabbitMQ, and Redis.',
+        'Engineered LLM-powered financial statement analysis pipelines, reducing due diligence review time to under 15 minutes.',
+        'Reduced production regressions by approximately 40% with strict typing, automated tests, Grafana, and Sentry.',
       ],
     },
     {
-      begin: '2022-03-17',
-      end: '2023-03-31',
-      link: 'https://www.paypal.com',
-      company: 'PayPal',
-      position: 'Javascript Web Developer',
-      points: [
-        'Developed signup and onboarding flows in Node.js and ReactJS.',
-        'Implemented experiments for user acceptance and feature rollout.',
-        'Created and maintained unit/integration tests.',
-        'Monitored production features and tracked errors.',
-      ],
-    },
-    {
-      begin: '2022-03-14',
-      end: '2023-03-18',
+      begin: '2022-05',
+      end: '2023-04',
       link: 'https://www.clipboardhealth.com',
       company: 'Clipboard Health',
       position: 'Senior Software Engineer',
       points: [
-        'Migrated Express endpoints to NestJS as company standard.',
-        'Developed mobile apps with React Native, Ionic, and Capacitor.',
-        'Integrated geofencing via Radar.com enabling instant healthcare payments.',
-        'Analyzed geomonitoring data, investigated inconsistencies, and fixed issues.',
+        'Architected high-throughput NestJS microservices with GraphQL and MongoDB for healthcare shift matching.',
+        'Engineered RabbitMQ and Redis geofencing pipelines processing thousands of concurrent telemetry events and automating instant payouts.',
+        'Developed mobile features with React Native, Ionic, and Capacitor and configured Bitrise CI/CD.',
+        'Led the transition from legacy Express endpoints to modular NestJS microservices in strict TypeScript.',
       ],
     },
     {
-      begin: '2021-02-22',
-      end: '2022-03-15',
+      begin: '2022-01',
+      end: '2023-03',
+      link: 'https://www.paypal.com',
+      company: 'PayPal',
+      position: 'Senior Software Engineer',
+      points: [
+        'Engineered high-concurrency Node.js/TypeScript BFF middleware connecting React frontends with core Java payment APIs.',
+        'Diagnosed and resolved production memory leaks, race conditions, and asynchronous execution bottlenecks under strict security SLAs.',
+      ],
+    },
+    {
+      begin: '2021-02',
+      end: '2022-07',
       link: 'https://www.digitaltrends.com',
       company: 'Digital Trends',
       position: 'Senior Software Engineer',
       points: [
-        'Refactored architecture for maintainability and readability.',
-        'Implemented authentication and authorization with tokens.',
-        'Built SEO tools comparing competitors’ metrics.',
-        'Integrated systems with Amazon, BestBuy, and marketplaces.',
+        'Refactored a monolithic media engine into modular Node.js/TypeScript microservices with centralized JWT authentication.',
+        'Integrated GraphQL APIs with Elasticsearch and Redis to aggregate Amazon and BestBuy product catalogs for search and advertising.',
       ],
     },
     {
-      begin: '2015-06-10',
+      begin: '2015-06',
       end: '2021-02-07',
       link: 'https://www.trixti.com.br',
       company: 'Trix Tecnologia',
-      position: 'Software Architect',
+      position: 'Tech Lead Engineer',
       points: [
-        'Built management systems for clinics and labs.',
-        'Integrated PACS servers for imaging exams.',
-        'Migrated systems to Node/React stack reducing costs.',
-        'Developed mobile apps for healthcare providers and patients.',
+        'Directed backend architecture for a nationwide clinical suite, evolving Java and Ruby on Rails monoliths into Node.js microservices.',
+        'Engineered protocol interfaces and stream processing for laboratory equipment, diagnostic hardware, and PACS/DICOM imaging servers.',
+        'Built WebSocket and event-driven pipelines synchronizing clinical queue panels with web and mobile clients in real time.',
       ],
-    },
-    {
-      begin: '2016-06-10',
-      end: '2019-02-07',
-      link: 'https://www.saintsolutions.com.br',
-      company: 'Saint Solutions',
-      position: 'Software Architect',
-      points: [
-        'Developed exchange systems for blockchain and cryptocurrencies.',
-        'Ruby on Rails for web development and backend.',
-        'Created Android/iOS apps with Java and Swift.',
-        'Implemented two-factor authentication and wallet generation.',
-      ],
-    },
-    {
-      begin: '2012-07-12',
-      end: '2015-06-05',
-      company: 'PixIdea Tecnologia',
-      position: 'Co-founder / Software Engineer',
-      points: [
-        'Founded startup, led product development for personal trainers/nutritionists.',
-        'Developed Ruby on Rails + Java/Swift apps.',
-        'Selected to acceleration program in Silicon Valley 2013.',
-        'Raised investment and gained media exposure.',
-      ],
-    },
-    {
-      begin: '2008-05',
-      end: '2012-07',
-      link: 'https://www.globalweb.com.br',
-      company: 'Global Web',
-      position: 'Java Tech Lead / Architect',
-      points: [
-        'Led architecture and development for Brazil’s largest telecom operator.',
-        'Stack: JSF, RichFaces, JPA, JBoss Seam, WebServices, EJB, and more.',
-        'Company link: http://www.b2br.com.br',
-      ],
-    },
-    {
-      begin: '2006-08',
-      end: '2008-05',
-      link: 'https://www.nct.com.br',
-      company: 'NCT Informática',
-      position: 'Systems Analyst',
-      points: [
-        'Worked with the Federal Police to elicit and document system requirements.',
-        'Provided hands-on programming support in J2EE and SuperWaba (J2ME).',
-        'Company link: http://www.nct.com.br',
-      ],
-    },
-    {
-      begin: '2004-10',
-      end: '2006-08',
-      link: 'https://en.wikipedia.org/wiki/Politec',
-      company: 'Politec Informática',
-      position: 'Systems Analyst',
-      points: [
-        'Delivered four banking projects; defined and implemented reusable frameworks.',
-        'Team leadership from architecture through delivery.',
-        'Built an Eclipse plugin to streamline Visual SourceSafe usage.',
-        'Company link: http://www.politec.com.br',
-      ],
-    },
-    {
-      begin: '2003-03',
-      end: '2004-10',
-      link: 'https://www.cast4it.com/en',
-      company: 'CastMeta Informática',
-      position: 'Java Developer',
-      points: [
-        'Built a government web system using Caché DB, proprietary framework, EJB, and Hibernate.',
-        'Company link: http://www.castmeta.com.br',
-      ],
-    },
-    {
-      begin: '2003-02',
-      end: '2003-10',
-      link: 'https://en.wikipedia.org/wiki/Politec',
-      company: 'Politec Informática',
-      position: 'Java Programmer',
-      points: [
-        'Worked across two banking systems using Struts, JNI, and Hibernate.',
-        'Co-created a persistence framework for database access.',
-      ],
-    },
-    {
-      begin: '2002-03',
-      end: '2003-02',
-      link: 'https://www.unimed.coop.br/site/web/centrooeste',
-      company: 'Unimed CO',
-      position: 'Java Programmer Trainee',
-      points: [
-        'Developed a desktop app to handle the transfer of internal files, such as authorizations, costs, and blockers.',
-        'Built using Java and Swing, ensuring reliability and better integration between Unimeds',
-      ],
-    },
-    {
-      begin: '2001-03',
-      end: '2002-03',
-      company: 'TCO (currently VIVO)',
-      link: 'https://en.wikipedia.org/wiki/Centro-Oeste_Celular',
-      position: 'SQL Server Trainee',
-      points: ['Developed reports and stored procedures on SQL Server.'],
     },
   ],
   courses: [
