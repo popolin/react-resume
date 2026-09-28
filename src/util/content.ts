@@ -175,7 +175,7 @@ export const resume: IResume = {
       company: 'PayPal',
       position: 'JavaScript Web Developer',
       points: [
-        'Developed signup and onboarding flows in Node.js and ReactJS.',
+        'Developed signup and onboarding flows in Node.js and React.js.',
         'Implemented experiments for user acceptance and feature rollout.',
         'Created and maintained unit/integration tests.',
         'Monitored production features and tracked errors.',
@@ -361,7 +361,7 @@ export const resume: IResume = {
       duration: '',
     },
     {
-      title: 'GoStack 14 - NodeJS, ReactJS, React Native',
+      title: 'GoStack 14 - Node.js, React.js, React Native',
       school: 'Rocketseat',
       candidate: 'Fullstack',
       begin: '2020',
