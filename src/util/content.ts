@@ -162,8 +162,8 @@ export const resume: IResume = {
       company: 'ClearCo',
       position: 'Senior Software Engineer',
       points: [
-        'Worked on software development using NestJS and VueJS.',
-        'Led the modernization of the frontend stack, migrating from Node 14, Vue 2, vue-cli, and Jest to Node 20, Vue3+TS, Vite and Vitest, improving performance, maintainability, and dev experience',
+        'Developed software using NestJS and Vue.js.',
+        'Led the modernization of the frontend stack, migrating from Node 14, Vue 2, Vue CLI, and Jest to Node 20, Vue 3 with TypeScript, Vite, and Vitest, improving performance, maintainability, and the developer experience.',
         'Developed Feature Flags system, reducing costs by eliminating a prior paid platform.',
         'Participated in team standups, retrospectives, and company-wide all-hands meetings.',
       ],
@@ -173,7 +173,7 @@ export const resume: IResume = {
       end: '2023-03-31',
       link: 'https://www.paypal.com',
       company: 'PayPal',
-      position: 'Javascript Web Developer',
+      position: 'JavaScript Web Developer',
       points: [
         'Developed signup and onboarding flows in Node.js and ReactJS.',
         'Implemented experiments for user acceptance and feature rollout.',
@@ -312,7 +312,7 @@ export const resume: IResume = {
       position: 'Java Programmer Trainee',
       points: [
         'Developed a desktop app to handle the transfer of internal files, such as authorizations, costs, and blockers.',
-        'Built using Java and Swing, ensuring reliability and better integration between Unimeds',
+        'Built using Java and Swing, ensuring reliability and better integration between Unimeds.',
       ],
     },
     {
