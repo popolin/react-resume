@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "24"
+  # Install build tools even when the site has NODE_ENV=production.
+  NPM_FLAGS = "--include=dev"
 
 [[redirects]]
   from = "/documents/Michel_Popolin_ATS_Resume.pdf"
